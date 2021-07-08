@@ -17,6 +17,3 @@ export const TitleContainer = styled.div`
 
 export const CarouselContainer = styled.div``;
 
-export const CarouselItemContainer = styled.div`
-  padding: 1rem;
-`;
