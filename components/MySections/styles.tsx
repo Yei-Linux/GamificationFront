@@ -13,7 +13,7 @@ export const MainBanner = styled.div`
 export const TitleContainer = styled.div`
   padding: 1rem;
   text-align: center;
+  margin-bottom: 1rem;
 `;
 
 export const CarouselContainer = styled.div``;
-

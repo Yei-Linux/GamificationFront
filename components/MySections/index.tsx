@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 
 import { Title, Wave, Slider } from "gamification-library";
 import { MainBanner, TitleContainer } from "./styles";
-import MySectionItem from "../MySectionItem";
+import MySectionItem from "../SectionSliderItem";
 
 export interface MySectionProps {}
 

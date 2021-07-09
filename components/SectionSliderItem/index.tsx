@@ -2,9 +2,9 @@ import { Card, Image } from "gamification-library";
 import React from "react";
 import { CarouselItemContainer } from "./styles";
 
-export interface MySectionItemProps {}
+export interface SectionSliderItemProps {}
 
-const MySectionItem = () => {
+const SectionSliderItem = () => {
   return (
     <CarouselItemContainer className="keen-slider__slide">
       <Card
@@ -32,4 +32,4 @@ const MySectionItem = () => {
   );
 };
 
-export default MySectionItem;
+export default SectionSliderItem;
