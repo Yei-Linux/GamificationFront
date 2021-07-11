@@ -1,12 +1,12 @@
 import { Button, Icon, List } from "gamification-library";
 import React from "react";
-import { SectionItemWrapper } from "./styles";
+import { SectionMyActivityListItemWrapper } from "./styles";
 
-export interface SectionListItemProps {}
+export interface SectionMyActivityListItemProps {}
 
-const SectionListItem = () => {
+const SectionMyActivityListItem = () => {
   return (
-    <SectionItemWrapper>
+    <SectionMyActivityListItemWrapper>
       <List.Item
         noBorder
         avatar={<Icon size="25px" name="book" />}
@@ -17,8 +17,8 @@ const SectionListItem = () => {
           Go!!
         </Button>
       </List.Item>
-    </SectionItemWrapper>
+    </SectionMyActivityListItemWrapper>
   );
 };
 
-export default SectionListItem;
+export default SectionMyActivityListItem;

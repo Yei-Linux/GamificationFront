@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const SectionListWrapper = styled.div`
+export const SectionMyActivityListWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;

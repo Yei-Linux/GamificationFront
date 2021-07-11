@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const SectionsDetailContainer = styled.div`
+export const SectionMyActivitiesContainer = styled.div`
   display: grid;
 
   grid-gap: 1rem;
@@ -8,5 +8,3 @@ export const SectionsDetailContainer = styled.div`
 `;
 
 export const SectionDetailItem = styled.div``;
-
-export const SectionsDetailWrapper = styled.div``;

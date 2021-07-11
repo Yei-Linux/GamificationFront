@@ -16,9 +16,11 @@ import {
   TopbarWrapper,
 } from "./styles";
 
-export interface TopbarProps {}
+export interface TopbarProps {
+  handleOpenMenu?: () => any;
+}
 
-const Topbar = ({}: TopbarProps) => {
+const Topbar = ({ handleOpenMenu }: TopbarProps) => {
   return (
     <TopbarWrapper>
       <Row justifyContent="space-between">
@@ -40,11 +42,13 @@ const Topbar = ({}: TopbarProps) => {
         <TopbarRight>
           <PhoneRow>
             <Row>
-              <Icon name="menu" size="30px" />
+              <Icon onClick={handleOpenMenu} name="menu" size="30px" />
             </Row>
           </PhoneRow>
           <DesktopRow>
             <Row>
+              <Icon onClick={handleOpenMenu} name="menu" size="20px" />
+              <Spacer direction="left" />
               <Icon name="notifications" size="20px" />
               <Spacer direction="left" />
               <Icon name="settings" size="20px" />

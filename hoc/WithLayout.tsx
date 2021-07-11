@@ -1,37 +1,51 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/display-name */
 import { Layout } from "gamification-library";
-import React from "react";
+
+import React, { Fragment, useState } from "react";
+import Footer from "../layouts/Footer";
+import MenuAside from "../layouts/MenuAside";
 import Topbar from "../layouts/Topbar";
 
 interface Props {
   hasHeader?: boolean;
-  headerChildren?: React.ReactNode[];
+  HeaderChildren?: React.ElementType;
   hasFooter?: boolean;
-  footerChildren?: React.ReactNode[];
+  FooterChildren?: React.ElementType;
 }
 
 const WithLayout = ({
   hasHeader,
-  headerChildren = [<Topbar key="0" />],
+  HeaderChildren = Topbar,
   hasFooter,
-  footerChildren,
+  FooterChildren = Footer,
 }: Props) => (WrappedComponent: any) => (componentProps: any) => {
+  const [open, setOpen] = useState(false);
+
+  const toggle = () => setOpen(!open);
   return (
-    <Layout>
-      {hasHeader && <Layout.Header>{headerChildren}</Layout.Header>}
-      <Layout.Content>
-        <WrappedComponent {...componentProps} />
-      </Layout.Content>
-      {hasFooter && <Layout.Footer>{footerChildren}</Layout.Footer>}
-    </Layout>
+    <Fragment>
+      <MenuAside onClose={toggle} open={open} />
+      <Layout>
+        {hasHeader && (
+          <Layout.Header>
+            {<HeaderChildren handleOpenMenu={toggle} />}
+          </Layout.Header>
+        )}
+        <Layout.Content>
+          <WrappedComponent {...componentProps} />
+        </Layout.Content>
+        {hasFooter && <Layout.Footer>{<FooterChildren />}</Layout.Footer>}
+      </Layout>
+    </Fragment>
   );
 };
 
 WithLayout.defaultProps = {
   hasHeader: true,
   hasFooter: true,
-  headerChildren: [<Topbar key="0" />],
-  footerChildren: [],
+  HeaderChildren: Topbar,
+  FooterChildren: Footer,
 };
 
 export default WithLayout;

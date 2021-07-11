@@ -1,24 +1,15 @@
-import { Title } from "gamification-library";
 import React from "react";
+import Section from "../../layouts/Section";
 import TitleSection from "../../layouts/TitleSection";
-import { TitleContainer } from "../MySections/styles";
-import SectionList from "../SectionList";
-import {
-  SectionDetailItem,
-  SectionsDetailContainer,
-  SectionsDetailWrapper,
-} from "./styles";
+import SectionList from "../SectionMyActivityList";
+import { SectionDetailItem, SectionMyActivitiesContainer } from "./styles";
 
-export interface SectionsDetailProps {}
+export interface SectionMyActivitiesProps {}
 
-const SectionsDetail = ({}: SectionsDetailProps) => {
+const SectionMyActivities = ({}: SectionMyActivitiesProps) => {
   return (
-    <SectionsDetailWrapper>
-      <TitleContainer>
-        <Title level="h2">Mis actividades</Title>
-      </TitleContainer>
-
-      <SectionsDetailContainer>
+    <Section>
+      <SectionMyActivitiesContainer>
         <SectionDetailItem>
           <TitleSection text="Mis clases" iconId="book" />
           <SectionList />
@@ -38,9 +29,9 @@ const SectionsDetail = ({}: SectionsDetailProps) => {
           <TitleSection text="Mis dudas" iconId="question" />
           <SectionList />
         </SectionDetailItem>
-      </SectionsDetailContainer>
-    </SectionsDetailWrapper>
+      </SectionMyActivitiesContainer>
+    </Section>
   );
 };
 
-export default SectionsDetail;
+export default SectionMyActivities;
