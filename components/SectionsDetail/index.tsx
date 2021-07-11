@@ -15,7 +15,7 @@ const SectionsDetail = ({}: SectionsDetailProps) => {
   return (
     <SectionsDetailWrapper>
       <TitleContainer>
-        <Title level="h2">Mis secciones</Title>
+        <Title level="h2">Mis actividades</Title>
       </TitleContainer>
 
       <SectionsDetailContainer>
