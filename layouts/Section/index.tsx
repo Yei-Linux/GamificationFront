@@ -6,17 +6,19 @@ export interface SectionProps {
   children: React.ReactNode;
   backgroundSection?: string;
   titleColor?: string;
+  title?: string;
 }
 
 const Section = ({
   children,
   backgroundSection = "white",
   titleColor = "#5fa4ff",
+  title = "Proyectos e Ideas",
 }: SectionProps) => {
   return (
     <SectionWrapper background={backgroundSection}>
       <TitleContainer color={titleColor}>
-        <Title level="h1">Proyectos e Ideas</Title>
+        <Title level="h1">{title}</Title>
       </TitleContainer>
 
       {children}

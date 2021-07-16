@@ -1,10 +1,8 @@
 import styled from "@emotion/styled";
+import { GridSection } from "../../styles/utilities/display";
 
 export const SectionMyActivitiesContainer = styled.div`
-  display: grid;
-
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  ${GridSection()}
 `;
 
 export const SectionDetailItem = styled.div``;

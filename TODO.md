@@ -7,8 +7,20 @@ My tasks to TODO
 
 ### In Progress
 
-- [ ] Changing slider component
+- [ ] Create Class Layout(15,16)
+
+- [ ] Create MyNotes Layout(17)
+- [ ] Create Exam Layout(17)
+
+- [ ] Create MyQuestions Layout(18)
+
+- [ ] Create SignIn Layout(19)
+- [ ] Create SignUp Layout(19)
 
 ### Done ✓
 
 - [x] Task Done
+
+- [x] Changing slider component
+- [x] Create home layout
+- [x] Create account layout
