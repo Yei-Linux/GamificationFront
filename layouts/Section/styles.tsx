@@ -11,7 +11,7 @@ export const TitleContainer = styled.div<{ color: string }>`
   text-align: center;
   font-family: "Righteous", cursive;
 
-  h1 {
+  * {
     color: ${(props) => props.color};
     font-weight: 500;
   }
