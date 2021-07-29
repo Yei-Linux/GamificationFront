@@ -60,7 +60,7 @@ const ClassAchievements = ({}: ClassAchievementsProps) => {
           text={
             <AchievementsCardContainer>
               <Title textAlign="CENTER" level="h5">
-                Memoristico
+                Memoria
               </Title>
               <RichText textAlign="CENTER" text="Memorizar,etc" />
             </AchievementsCardContainer>

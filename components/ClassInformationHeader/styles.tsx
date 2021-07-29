@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { themeCustom } from "../../styles/theme";
 
 export const ClassInformationHeaderWrapper = styled.div`
-  width: 80%;
   margin: 1rem auto;
 `;
 export const TutorInfoContainer = styled.div`

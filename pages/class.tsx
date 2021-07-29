@@ -1,28 +1,32 @@
 import styled from "@emotion/styled";
 import { Row } from "gamification-library";
 import React, { Fragment } from "react";
-import ClassAchievements from "../components/ClassAchievements";
-import ClassInformationHeader from "../components/ClassInformationHeader";
+import ClassChat from "../components/ClassChat";
+import ClassDetails from "../components/ClassDetails";
 import ClassVideo from "../components/ClassVideo";
 
 import WithLayout from "../hoc/WithLayout";
 
 export interface ClassProps {}
 
-const ClassInformationContainer = styled.div``;
+const ClassInformationContainer = styled.div`
+  padding: 1rem;
+`;
 
-const ClassContentContainer = styled.div``;
+const ClassContentContainer = styled.div`
+  padding: 1rem;
+`;
 
 const Class = ({}: ClassProps) => {
   return (
     <Fragment>
-      <Row justifyContent="space-around">
+      <Row justifyContent="space-around" alignItems="flex-start">
         <ClassInformationContainer>
-          <ClassInformationHeader />
-          <ClassAchievements />
+          <ClassDetails />
         </ClassInformationContainer>
         <ClassContentContainer>
           <ClassVideo />
+          <ClassChat />
         </ClassContentContainer>
       </Row>
     </Fragment>

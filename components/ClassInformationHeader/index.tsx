@@ -19,7 +19,7 @@ const ClassInformationHeader = ({}: ClassInformationHeaderProps) => {
           align="left"
           color={themeCustom.light.color.primary.one}
           level="h3"
-          text="Learning about data structures with Javascript"
+          text="Theme: Learning about data structures with Javascript"
         />
       </ClassTitleContainer>
       <TutorInfoContainer>

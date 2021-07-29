@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { GridSection } from "../../styles/utilities/display";
 
 export const ClassAchievementsWrapper = styled.div`
-  width: 80%;
   margin: 2rem auto;
 `;
 
