@@ -3,6 +3,7 @@ import { Row } from "gamification-library";
 import React, { Fragment } from "react";
 import ClassChat from "../components/ClassChat";
 import ClassDetails from "../components/ClassDetails";
+import ClassNotes from "../components/ClassNotes";
 import ClassVideo from "../components/ClassVideo";
 
 import WithLayout from "../hoc/WithLayout";
@@ -23,6 +24,7 @@ const Class = ({}: ClassProps) => {
       <Row justifyContent="space-around" alignItems="flex-start">
         <ClassInformationContainer>
           <ClassDetails />
+          <ClassNotes />
         </ClassInformationContainer>
         <ClassContentContainer>
           <ClassVideo />
