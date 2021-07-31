@@ -9,7 +9,7 @@ export interface NotesUIBasicProps {
 }
 
 type IEventNote = (value: string) => void;
-type ISaveEditNote = (value: NotesUIBasicProps) => void;
+type ISaveEditNote = () => void;
 type IDeleteNote = (value: number | string) => void;
 
 export interface NotesUIProps extends NotesUIBasicProps {
@@ -25,6 +25,8 @@ const NotesUI = ({
   title,
   text,
   onChangeTitle,
+  onSave,
+  onEdit,
   onChange,
   onDelete,
 }: NotesUIProps) => {
@@ -36,6 +38,8 @@ const NotesUI = ({
         defaultValue={text}
         onChange={onChange}
         onDelete={() => onDelete(id)}
+        onSave={onSave}
+        onEdit={onEdit}
       />
     </NotesUIWrapper>
   );

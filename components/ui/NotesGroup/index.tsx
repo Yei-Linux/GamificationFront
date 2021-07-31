@@ -1,5 +1,5 @@
-import { Note } from "gamification-library";
-import React from "react";
+import { Floating, GuideMessage, Note } from "gamification-library";
+import React, { useState } from "react";
 import { useArray } from "../../../hooks/useArray";
 
 import dynamic from "next/dynamic";
@@ -13,25 +13,51 @@ import { NotesGroupWrapper } from "./style";
 export interface NotesGroupProps {}
 
 const NotesGroup = () => {
-  const { value: notes, setValue: setNotes, add, removeById } = useArray([]);
+  const [visible, setIsVisible] = useState(false);
+
+  const [noteIdOnCreation, setNoteIdOnCreation] = useState<
+    string | number | null
+  >(null);
+  const [isCreateNewOrEditOne, setIsCreateNewOrEditOne] = useState(false);
+  const { value: notes, add, removeById, updateItemByField } = useArray([]);
+
+  const toggleVisible = () => setIsVisible(!visible);
+
+  const toggleCreatedOrEditNote = (): void => setIsCreateNewOrEditOne(true);
+
+  const toggleFinishOnCreatedOrEditNote = (): void =>
+    setIsCreateNewOrEditOne(false);
+
+  const toggleUpAndSetNoteId = (id: number | string) => {
+    setNoteIdOnCreation(id);
+    toggleCreatedOrEditNote();
+  };
 
   const handleChangeNote = (
     field: string,
     value: unknown,
     id: string | number
   ) => {
-    const notesToUpdate = [...notes];
+    updateItemByField("id", id, field, value);
+  };
 
-    notesToUpdate.forEach((note: NotesUIBasicProps) => {
-      if (note?.id == id) {
-        note = {
-          ...note,
-          [field]: value,
-        };
-      }
+  const handleDeleteNote = (id: number | string): void => {
+    noteIdOnCreation == id && toggleFinishOnCreatedOrEditNote();
+    removeById(id);
+  };
+
+  const handleAddNote = (): void => {
+    if (isCreateNewOrEditOne) {
+      !visible && toggleVisible();
+      return;
+    }
+
+    toggleUpAndSetNoteId(notes?.length);
+    add({
+      id: notes?.length,
+      title: "",
+      text: "",
     });
-
-    setNotes(notesToUpdate);
   };
 
   return (
@@ -39,28 +65,33 @@ const NotesGroup = () => {
       <Note.NotesLayout>
         {notes?.map((note: NotesUIBasicProps, index: number) => (
           <NotesUI
+            onSave={toggleFinishOnCreatedOrEditNote}
+            onEdit={() => toggleUpAndSetNoteId(note?.id)}
             onChangeTitle={(value: string) =>
-              handleChangeNote("title", value, index)
+              handleChangeNote("title", value, note?.id)
             }
-            onChange={(value: string) => handleChangeNote("text", value, index)}
+            onChange={(value: string) =>
+              handleChangeNote("text", value, note?.id)
+            }
             key={index}
-            id={index}
+            id={note.id}
             title={note.title}
-            text={note.title}
-            onDelete={(value: number | string) => removeById(value)}
+            text={note.text}
+            onDelete={handleDeleteNote}
           />
         ))}
       </Note.NotesLayout>
 
-      <Note.NoteAdd
-        onAddNote={() =>
-          add({
-            id: notes?.lenght,
-            title: "",
-            text: "",
-          })
-        }
-      />
+      <Note.NoteAdd onAddNote={handleAddNote} />
+
+      <Floating direction="top" visible={visible} onClose={toggleVisible}>
+        <GuideMessage
+          guideType="worried"
+          message="Debes de guardar tu nota para crear una nueva!"
+          direction="right"
+          background="#ff75a0"
+        />
+      </Floating>
     </NotesGroupWrapper>
   );
 };

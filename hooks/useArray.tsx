@@ -19,5 +19,19 @@ export const useArray = (initial: any[]): any => {
         }),
       []
     ),
+    updateItemByField: useCallback(
+      (fieldSearch, valueSearch, field, value) =>
+        setValue((v) =>
+          v.map((item: any) =>
+            item?.[fieldSearch] == valueSearch
+              ? {
+                  ...item,
+                  [field]: value,
+                }
+              : item
+          )
+        ),
+      []
+    ),
   };
 };
