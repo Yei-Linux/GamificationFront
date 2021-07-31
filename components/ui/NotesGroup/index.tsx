@@ -1,4 +1,4 @@
-import { Floating, GuideMessage, Note } from "gamification-library";
+import { Empty, Floating, GuideMessage, Note } from "gamification-library";
 import React, { useState } from "react";
 import { useArray } from "../../../hooks/useArray";
 
@@ -8,7 +8,7 @@ const NotesUI = dynamic(() => import("../NotesUI"), {
 });
 
 import { NotesUIBasicProps } from "../NotesUI";
-import { NotesGroupWrapper } from "./style";
+import { NotesAddContainer, NotesGroupWrapper } from "./style";
 
 export interface NotesGroupProps {}
 
@@ -62,27 +62,33 @@ const NotesGroup = () => {
 
   return (
     <NotesGroupWrapper>
-      <Note.NotesLayout>
-        {notes?.map((note: NotesUIBasicProps, index: number) => (
-          <NotesUI
-            onSave={toggleFinishOnCreatedOrEditNote}
-            onEdit={() => toggleUpAndSetNoteId(note?.id)}
-            onChangeTitle={(value: string) =>
-              handleChangeNote("title", value, note?.id)
-            }
-            onChange={(value: string) =>
-              handleChangeNote("text", value, note?.id)
-            }
-            key={index}
-            id={note.id}
-            title={note.title}
-            text={note.text}
-            onDelete={handleDeleteNote}
-          />
-        ))}
-      </Note.NotesLayout>
+      {notes.length == 0 ? (
+        <Empty />
+      ) : (
+        <Note.NotesLayout>
+          {notes?.map((note: NotesUIBasicProps, index: number) => (
+            <NotesUI
+              onSave={toggleFinishOnCreatedOrEditNote}
+              onEdit={() => toggleUpAndSetNoteId(note?.id)}
+              onChangeTitle={(value: string) =>
+                handleChangeNote("title", value, note?.id)
+              }
+              onChange={(value: string) =>
+                handleChangeNote("text", value, note?.id)
+              }
+              key={index}
+              id={note.id}
+              title={note.title}
+              text={note.text}
+              onDelete={handleDeleteNote}
+            />
+          ))}
+        </Note.NotesLayout>
+      )}
 
-      <Note.NoteAdd onAddNote={handleAddNote} />
+      <NotesAddContainer>
+        <Note.NoteAdd onAddNote={handleAddNote} />
+      </NotesAddContainer>
 
       <Floating direction="top" visible={visible} onClose={toggleVisible}>
         <GuideMessage
