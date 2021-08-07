@@ -6,17 +6,13 @@ My tasks to TODO
 
 
 ### In Progress
-- [ ] Create MyNotes Layout(17)
-- [ ] Create Exam Layout(17)
-- [ ] Create My Courses, Ny teachers, My Languages Layout(17)
-
-- [ ] Create MyQuestions Layout(18)
-- [ ] Create SignIn Layout(19)
-- [ ] Create SignUp Layout(19)
+- [ ] Create My Courses, My teachers, My Languages Layout(17)
 
 - [ ] Improve all UI/UX Layouts
-
 - [ ] Improve componentes code, refactoring
+
+- [ ] Create SignIn Layout(19)
+- [ ] Create SignUp Layout(19)
 
 ### Done ✓
 
@@ -27,3 +23,6 @@ My tasks to TODO
 - [x] Create account layout
 
 - [x] Create Class Layout(15,16)
+
+- [x] Create MyNotes Layout(17)
+- [x] Create Exam Layout(17)

@@ -1,8 +1,8 @@
 import React from "react";
 import TitleDefault from "../../layouts/TitleDefault";
 import { themeCustom } from "../../styles/theme";
-import ClassAchievements from "../ClassAchievements";
 import ClassInformationHeader from "../ClassInformationHeader";
+import Achievements from "../ui/Achievements";
 import {
   ClassDetailsContainer,
   ClassDetailsTitle,
@@ -25,7 +25,11 @@ const ClassDetails = ({}: ClassDetailsProps) => {
       </ClassDetailsTitle>
       <ClassDetailsContainer>
         <ClassInformationHeader />
-        <ClassAchievements />
+        <Achievements title="What personal skills do you improve in this class">
+          <Achievements.Item titleItem="Visual" text="Videos,etc" />
+          <Achievements.Item titleItem="Auditivo" text="Audios,etc" />
+          <Achievements.Item titleItem="Memoria" text="Memorizar,etc" />
+        </Achievements>
       </ClassDetailsContainer>
     </ClassDetailsWrapper>
   );

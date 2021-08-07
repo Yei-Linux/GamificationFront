@@ -14,7 +14,7 @@
     "@types/marked": "^2.0.3",
     "@types/react-dom": "^17.0.9",
     "file-loader": "^6.2.0",
-    "gamification-library": "^1.0.54",
+    "gamification-library": "^1.0.56",
     "next": "11.0.1",
     "next-transpile-modules": "^8.0.0"
   },

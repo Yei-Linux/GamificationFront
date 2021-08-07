@@ -2,22 +2,24 @@ import { Button, Icon, List } from "gamification-library";
 import React from "react";
 import { NOTES_THEMES } from "../../data/mocks";
 import { useArray } from "../../hooks/useArray";
-import TitleDefault from "../../layouts/TitleDefault";
+import TitleDefault from "../TitleDefault";
 import { themeCustom } from "../../styles/theme";
 import {
-  NotesSiderBarContent,
-  NotesSiderBarTitle,
-  NotesSiderBarWrapper,
+  ListSiderBarContent,
+  ListSiderBarTitle,
+  ListSiderBarWrapper,
 } from "./styles";
 
-export interface NotesSiderBarProps {}
+export interface ListSiderBarProps {
+  items?: any[];
+}
 
-const NotesSiderBar = ({}: NotesSiderBarProps) => {
-  const { value: themeNotes } = useArray(NOTES_THEMES);
+const ListSiderBar = ({ items }: ListSiderBarProps) => {
+  const { value: themeNotes } = useArray(items ?? []);
 
   return (
-    <NotesSiderBarWrapper>
-      <NotesSiderBarTitle>
+    <ListSiderBarWrapper>
+      <ListSiderBarTitle>
         <TitleDefault
           padding="0px"
           align="left"
@@ -25,8 +27,8 @@ const NotesSiderBar = ({}: NotesSiderBarProps) => {
           level="h2"
           text="Themes"
         />
-      </NotesSiderBarTitle>
-      <NotesSiderBarContent>
+      </ListSiderBarTitle>
+      <ListSiderBarContent>
         {themeNotes?.map((theme: any, index: number) => (
           <List.Item
             key={index}
@@ -40,9 +42,13 @@ const NotesSiderBar = ({}: NotesSiderBarProps) => {
             </Button>
           </List.Item>
         ))}
-      </NotesSiderBarContent>
-    </NotesSiderBarWrapper>
+      </ListSiderBarContent>
+    </ListSiderBarWrapper>
   );
 };
 
-export default NotesSiderBar;
+ListSiderBar.defaultProps = {
+  items: NOTES_THEMES,
+};
+
+export default ListSiderBar;

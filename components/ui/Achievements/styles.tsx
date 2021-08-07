@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
-import { GridSection } from "../../styles/utilities/display";
+import { GridSection } from "../../../styles/utilities/display";
 
-export const ClassAchievementsWrapper = styled.div`
+export const AchievementsWrapper = styled.div`
   margin: 2rem auto;
 `;
 
-export const ClassAchievementTitle = styled.div``;
+export const AchievementTitle = styled.div``;
 
-export const ClassAchievementsContainer = styled.div`
+export const AchievementsContainer = styled.div`
   max-width: 350px;
   margin: 2rem auto;
   ${GridSection("auto-fit", "minmax(60px, 1fr)")}
