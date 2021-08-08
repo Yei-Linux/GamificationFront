@@ -1,7 +1,7 @@
 import React from "react";
-import NotesGroup from "../components/ui/NotesGroup";
+import NotesGroup from "../componentsold/ui/NotesGroup";
 import WithLayout from "../hoc/WithLayout";
-import ListWithDetail from "../layouts/ListWithDetail";
+import ListWithDetail from "../app/components/layouts/ListWithDetail";
 
 const Notes = () => {
   return (

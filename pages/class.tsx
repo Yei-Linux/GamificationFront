@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
 import { Row } from "gamification-library";
 import React, { Fragment } from "react";
-import ClassChat from "../components/ClassChat";
-import ClassDetails from "../components/ClassDetails";
-import ClassInstruction from "../components/ClassInstruction";
-import ClassNotes from "../components/ClassNotes";
-import ClassVideo from "../components/ClassVideo";
+import ClassChat from "../componentsold/ClassChat";
+import ClassDetails from "../componentsold/ClassDetails";
+import ClassInstruction from "../componentsold/ClassInstruction";
+import ClassNotes from "../componentsold/ClassNotes";
+import ClassVideo from "../componentsold/ClassVideo";
 
 import WithLayout from "../hoc/WithLayout";
 

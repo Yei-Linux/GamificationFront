@@ -3,9 +3,9 @@
 import { Layout } from "gamification-library";
 
 import React, { Fragment, useState } from "react";
-import Footer from "../layouts/Footer";
-import MenuAside from "../layouts/MenuAside";
-import Topbar from "../layouts/Topbar";
+import Footer from "../app/components/layouts/Footer";
+import MenuAside from "../app/components/layouts/MenuAside";
+import Topbar from "../app/components/layouts/Topbar";
 
 interface Props {
   hasHeader?: boolean;
