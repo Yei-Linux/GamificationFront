@@ -6,8 +6,6 @@ My tasks to TODO
 
 
 ### In Progress
-- [ ] Create My Courses, My teachers, My Languages Layout(17)
-
 - [ ] Improve all UI/UX Layouts
 - [ ] Improve componentes code, refactoring
 
@@ -26,3 +24,5 @@ My tasks to TODO
 
 - [x] Create MyNotes Layout(17)
 - [x] Create Exam Layout(17)
+
+- [x] Create My Courses Layout(17)

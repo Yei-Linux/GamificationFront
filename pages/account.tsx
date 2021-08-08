@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import { Col, mediaQuery, Row } from "gamification-library";
 import React from "react";
-import AccountGameInformation from "../components/AccountGameInformation";
-import AccountInformation from "../components/AccountInformation";
-import AccountScorePosition from "../components/AccountScorePosition";
-import AccountTaskInformation from "../components/AccountTaskInformation";
+import AccountGameInformation from "../componentsold/AccountGameInformation";
+import AccountInformation from "../componentsold/AccountInformation";
+import AccountScorePosition from "../componentsold/AccountScorePosition";
+import AccountTaskInformation from "../componentsold/AccountTaskInformation";
 import WithLayout from "../hoc/WithLayout";
 import { GridSection } from "../styles/utilities/display";
 

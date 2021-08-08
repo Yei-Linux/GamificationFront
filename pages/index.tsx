@@ -1,9 +1,9 @@
 import React from "react";
 
-import BannerMySections from "../components/BannerMySections";
-import SectionFeaturedStudents from "../components/SectionFeaturedStudents";
-import SectionMyActivities from "../components/SectionMyActivities";
-import SectionIdeasAndProjects from "../components/SectionIdeasAndProjects";
+import BannerMySections from "../componentsold/BannerMySections";
+import SectionFeaturedStudents from "../componentsold/SectionFeaturedStudents";
+import SectionMyActivities from "../componentsold/SectionMyActivities";
+import SectionIdeasAndProjects from "../componentsold/SectionIdeasAndProjects";
 
 import WithLayout from "../hoc/WithLayout";
 
