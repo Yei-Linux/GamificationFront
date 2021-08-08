@@ -1,7 +1,12 @@
 import { useState } from "react";
+import { INoteItemGeneralProps } from "../types/notes";
 import { useArray } from "./useArray";
 
-export const useNotes = () => {
+export interface IUseNotes{
+  notes : INoteItemGeneralProps[]
+}
+
+export const useNotes = ({notes} : IUseNotes) => {
   const [visible, setIsVisible] = useState(false);
   const [isCreateNewOrEditOne, setIsCreateNewOrEditOne] = useState(false);
 
@@ -10,12 +15,12 @@ export const useNotes = () => {
   >(null);
 
   const {
-    value: notes,
+    value: notesItems,
     add,
     removeById,
     updateItemByField,
     isEmpty,
-  } = useArray([]);
+  } = useArray(notes);
 
   const toggleVisible = () => setIsVisible(!visible);
 
@@ -46,16 +51,16 @@ export const useNotes = () => {
       return;
     }
 
-    toggleUpAndSetNoteId(notes?.length);
+    toggleUpAndSetNoteId(notesItems?.length);
     add({
-      id: notes?.length,
+      id: notesItems?.length,
       title: "",
       text: "",
     });
   };
 
   return {
-    notes,
+    notesItems,
     isEmptyNote: isEmpty,
     visible,
     toggleVisible,

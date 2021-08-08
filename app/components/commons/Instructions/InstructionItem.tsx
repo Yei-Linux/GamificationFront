@@ -4,17 +4,11 @@ import TitleSection from "../../layouts/TitleSection";
 import { themeCustom } from "../../../../styles/theme";
 
 import * as S from "./styles";
+import { IGeneralInstructionsItem } from "../../../types/instructions";
 
 type IClickButton = () => void;
 
-export interface IInstructionItemProps {
-  mainTitle: string;
-  subTitle: string;
-  description?: string;
-  buttonText?: string;
-  src: string;
-
-  hasButtonToFinish?: boolean;
+export interface IInstructionItemProps extends IGeneralInstructionsItem {
   onClickButtonToFinish?: IClickButton;
 }
 
@@ -35,7 +29,7 @@ const InstructionItem = ({
           color={themeCustom.light.color.primary.one}
           text={mainTitle}
         />
-        
+
         <Row height="auto">
           <Image width="300px" alt="Instruction" src={src} />
         </Row>

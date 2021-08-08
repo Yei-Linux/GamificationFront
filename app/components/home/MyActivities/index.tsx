@@ -7,7 +7,7 @@ import SectionList from "./SectionList";
 
 import * as S from "./styles";
 
-const SectionMyActivities = () => {
+const MyActivities = () => {
   const { value: myActivities } = useArray([]);
 
   return (
@@ -26,4 +26,4 @@ const SectionMyActivities = () => {
   );
 };
 
-export default SectionMyActivities;
+export default MyActivities;

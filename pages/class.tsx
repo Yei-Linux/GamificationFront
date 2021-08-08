@@ -1,37 +1,79 @@
 import styled from "@emotion/styled";
 import { Row } from "gamification-library";
-import React, { Fragment } from "react";
-import ClassChat from "../componentsold/ClassChat";
-import ClassDetails from "../componentsold/ClassDetails";
-import ClassInstruction from "../componentsold/ClassInstruction";
-import ClassNotes from "../componentsold/ClassNotes";
-import ClassVideo from "../componentsold/ClassVideo";
+import React, { Fragment, useState } from "react";
+import ClassChat from "../app/components/class/ClassChat";
+import ClassDetails from "../app/components/class/ClassDetail";
+import ClassNotes from "../app/components/class/ClassNotes";
+import ClassVideo from "../app/components/class/ClassVideo";
+import Instructions from "../app/components/commons/Instructions";
+import { DUMMY_CLASS } from "../app/dummy/class";
+import { DUMMY_INSTRUCTIONS__CLASS } from "../app/dummy/instructions";
+import { useArray } from "../app/hooks/useArray";
+import { IGeneralInstructionsItem } from "../app/types/instructions";
 
 import WithLayout from "../hoc/WithLayout";
 
-export interface ClassProps {}
-
-const ClassInformationContainer = styled.div`
+const ClassInformation = styled.div`
   padding: 1rem;
 `;
 
-const ClassContentContainer = styled.div`
+const ClassContent = styled.div`
   padding: 1rem;
 `;
 
-const Class = ({}: ClassProps) => {
+const Class = () => {
+  const [{ id, title, tutor, achievements, notes, urlVideo }] = useState(
+    DUMMY_CLASS
+  );
+  const [isCloseSliding, setIsCloseSliding] = useState(false);
+  const { value: instructions } = useArray(DUMMY_INSTRUCTIONS__CLASS);
+
   return (
     <Fragment>
-      <ClassInstruction/>
+      <Instructions isCloseSliding={isCloseSliding}>
+        {instructions.map(
+          (
+            {
+              mainTitle,
+              subTitle,
+              description,
+              buttonText,
+              src,
+              hasButtonToFinish,
+            }: IGeneralInstructionsItem,
+            index: number
+          ) => (
+            <Instructions.Item
+              key={index}
+              mainTitle={mainTitle}
+              subTitle={subTitle}
+              description={description}
+              buttonText={buttonText}
+              src={src}
+              hasButtonToFinish={hasButtonToFinish}
+              onClickButtonToFinish={() =>
+                hasButtonToFinish ? setIsCloseSliding(true) : {}
+              }
+            />
+          )
+        )}
+      </Instructions>
+
       <Row justifyContent="space-around" alignItems="flex-start">
-        <ClassInformationContainer>
-          <ClassDetails />
-          <ClassNotes />
-        </ClassInformationContainer>
-        <ClassContentContainer>
-          <ClassVideo />
+        <ClassInformation>
+          <ClassDetails
+            id={id}
+            title={title}
+            tutor={tutor}
+            achievements={achievements}
+          />
+          <ClassNotes notes={notes} />
+        </ClassInformation>
+
+        <ClassContent>
+          <ClassVideo urlVideo={urlVideo} />
           <ClassChat />
-        </ClassContentContainer>
+        </ClassContent>
       </Row>
     </Fragment>
   );

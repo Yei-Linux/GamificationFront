@@ -7,6 +7,7 @@ import * as S from "./styles";
 
 export interface PageDetailProps {
   title: string;
+  detailButtonText?: string;
   items: IPageListItem[];
   listTitle: string;
   listButtonText: string;
@@ -17,6 +18,7 @@ export interface PageDetailProps {
 
 const PageDetail = ({
   title,
+  detailButtonText = "All",
   children,
   items,
   spacerSize = 5,
@@ -42,7 +44,12 @@ const PageDetail = ({
       <S.PageDetail>
         <Row alignItems="flex-start">
           <Col spacing="md" xs={12} sm={12} md={8} lg={8}>
-            <Detail toggle={toggle} spacerSize={spacerSize} title={title}>
+            <Detail
+              buttonText={detailButtonText}
+              toggle={toggle}
+              spacerSize={spacerSize}
+              title={title}
+            >
               {children}
             </Detail>
           </Col>

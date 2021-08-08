@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
-import ExamSurvey from "../componentsold/ExamSurvey";
-
+import ExamSurvey from "../app/components/exam/ExamSurvey";
 const ExamWrapper = styled.div``;
 
 const Exam = () => {

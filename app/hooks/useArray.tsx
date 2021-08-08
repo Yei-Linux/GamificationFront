@@ -6,6 +6,7 @@ export const useArray = (initial: any[]): any => {
     value,
     setValue,
     isEmpty: () => value.length == 0,
+    lastIndexValue: () => value.length - 1,
     add: useCallback((a) => setValue((v) => [...v, a]), []),
     clear: useCallback(() => setValue(() => []), []),
     removeById: useCallback(

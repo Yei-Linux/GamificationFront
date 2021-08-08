@@ -1,13 +1,23 @@
 import React from "react";
-import CourseDetail from "../componentsold/CourseDetail";
+import PageDetail from "../app/components/commons/PageDetail";
+import CourseDetail from "../app/components/courses/CourseDetail";
+import { DUMMY_THEME_COURSES } from "../app/dummy/courses";
+import { useArray } from "../app/hooks/useArray";
 import WithLayout from "../hoc/WithLayout";
-import ListWithDetail from "../app/components/layouts/ListWithDetail";
 
 const Courses = () => {
+  const { value: themeCourses } = useArray(DUMMY_THEME_COURSES);
+
   return (
-    <ListWithDetail spacerSize={1}>
-      <CourseDetail description="This course is about introduction on javascript world with many resources for you to improve your skills" />
-    </ListWithDetail>
+    <PageDetail
+      detailButtonText="All Themes"
+      title="My Courses"
+      items={themeCourses}
+      listTitle="Themes"
+      listButtonText="View"
+    >
+      <CourseDetail/>
+    </PageDetail>
   );
 };
 

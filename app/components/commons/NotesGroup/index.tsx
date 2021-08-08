@@ -9,18 +9,22 @@ const NotesItem = dynamic(() => import("./NoteItem"), {
   ssr: false,
 });
 
-const NotesGroup = () => {
+export interface INotesGroup {
+  notes: INoteItemGeneralProps[];
+}
+
+const NotesGroup = ({ notes }: INotesGroup) => {
   const {
     isEmptyNote,
     handleAddNote,
     visible,
     toggleVisible,
-    notes,
+    notesItems,
     toggleFinishOnCreatedOrEditNote,
     toggleUpAndSetNoteId,
     handleChangeNote,
     handleDeleteNote,
-  } = useNotes();
+  } = useNotes({ notes });
 
   return (
     <S.NotesGroup>
@@ -28,23 +32,25 @@ const NotesGroup = () => {
         <Empty />
       ) : (
         <Note.NotesLayout>
-          {notes?.map((note: INoteItemGeneralProps, index: number) => (
-            <NotesItem
-              onSave={toggleFinishOnCreatedOrEditNote}
-              onEdit={() => toggleUpAndSetNoteId(note?.id)}
-              onChangeTitle={(value: string) =>
-                handleChangeNote("title", value, note?.id)
-              }
-              onChange={(value: string) =>
-                handleChangeNote("text", value, note?.id)
-              }
-              key={index}
-              id={note.id}
-              title={note.title}
-              text={note.text}
-              onDelete={handleDeleteNote}
-            />
-          ))}
+          {notesItems?.map(
+            ({ id, title, text }: INoteItemGeneralProps, index: number) => (
+              <NotesItem
+                onSave={toggleFinishOnCreatedOrEditNote}
+                onEdit={() => toggleUpAndSetNoteId(id)}
+                onChangeTitle={(value: string) =>
+                  handleChangeNote("title", value, id)
+                }
+                onChange={(value: string) =>
+                  handleChangeNote("text", value, id)
+                }
+                key={index}
+                id={id}
+                title={title}
+                text={text}
+                onDelete={handleDeleteNote}
+              />
+            )
+          )}
         </Note.NotesLayout>
       )}
 
