@@ -1,5 +1,6 @@
 import { Survey } from "gamification-library";
 import React, { Fragment, useState } from "react";
+import { DUMMY__EXAM__QUESTIONS } from "../../../dummy/exam";
 import { DUMMY_INSTRUCTIONS__EXAM } from "../../../dummy/instructions";
 import { useArray } from "../../../hooks/useArray";
 import { IQuestionSurvey } from "../../../types/exam";
@@ -13,7 +14,7 @@ export interface ExamSurveyProps {}
 const ExamSurvey = ({}: ExamSurveyProps) => {
   const [isCloseSliding, setIsCloseSliding] = useState(false);
 
-  const { value: questions, lastIndexValue } = useArray([]);
+  const { value: questions, lastIndexValue } = useArray(DUMMY__EXAM__QUESTIONS);
   const { value: instructions } = useArray(DUMMY_INSTRUCTIONS__EXAM);
 
   return (

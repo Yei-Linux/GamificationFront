@@ -20,7 +20,7 @@ export const DUMMY_INSTRUCTIONS__EXAM = [
     subTitle: "El chat te ayudará para consultar aquellas dudas que tengas",
     buttonText: "Empezar",
     src: "https://i.ibb.co/7rxmRdq/009-app-user-colour.jpg",
-    hasButtonToFinish: false,
+    hasButtonToFinish: true,
   },
 ];
 
@@ -46,6 +46,6 @@ export const DUMMY_INSTRUCTIONS__CLASS = [
     subTitle: "El chat te ayudará para consultar aquellas dudas que tengas",
     buttonText: "Empezar",
     src: "https://i.ibb.co/7rxmRdq/009-app-user-colour.jpg",
-    hasButtonToFinish: false,
+    hasButtonToFinish: true,
   },
 ];

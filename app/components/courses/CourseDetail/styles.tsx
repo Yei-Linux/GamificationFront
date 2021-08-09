@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { themeCustom } from "../../../../styles/theme";
 
 export const CourseDetail = styled.div``;
 

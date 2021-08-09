@@ -1,0 +1,37 @@
+import { Card, Row } from "gamification-library";
+import React from "react";
+import Section from "../../layouts/Section";
+import AccountAchieves, { IBadge } from "./AccountAchieves";
+import AccountSkills, { ISkill } from "./AccountSkills";
+
+import * as S from "./styles";
+
+export interface AccountGameInformationProps {
+  badges: IBadge[];
+  skills: ISkill[];
+}
+
+const AccountGameInformation = ({
+  badges,
+  skills,
+}: AccountGameInformationProps) => {
+  return (
+    <Section title="Mis Logros" backgroundSection="transparent">
+      <Row>
+        <S.GameItem>
+          <Card width="FULL" heigth="FULL">
+            <AccountAchieves badges={badges} />
+          </Card>
+        </S.GameItem>
+
+        <S.GameItem>
+          <Card width="FULL" heigth="FULL">
+            <AccountSkills skills={skills} />
+          </Card>
+        </S.GameItem>
+      </Row>
+    </Section>
+  );
+};
+
+export default AccountGameInformation;
