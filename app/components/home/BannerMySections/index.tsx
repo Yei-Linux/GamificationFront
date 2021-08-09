@@ -5,9 +5,10 @@ import Section from "../../layouts/Section";
 import { themeCustom } from "../../../../styles/theme";
 import MySectionItem, { IMySectionItem } from "./MySectionItem";
 import { useArray } from "../../../hooks/useArray";
+import { DUMMY__MY__SECTIONS } from "../../../dummy/home";
 
 const BannerMySections = () => {
-  const { value: mySections } = useArray([]);
+  const { value: mySections } = useArray(DUMMY__MY__SECTIONS);
 
   return (
     <Wave direction="bottom">

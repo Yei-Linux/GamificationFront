@@ -76,7 +76,7 @@ export const DUMMY__SCORE__POSITION = [
 ];
 
 export const DUMMY__ACCOUNT__INFORMATION = {
-  srcProfile: "",
+  srcProfile: "https://iconape.com/wp-content/png_logo_vector/avatar-6.png",
   lvl: "Level 7",
   userName: "YeiLinux",
   email: "yei@gmail.com",

@@ -1,5 +1,6 @@
 import { Row } from "gamification-library";
 import React from "react";
+import { DUMMY__FEATURED__STUDENTS } from "../../../dummy/home";
 import { useArray } from "../../../hooks/useArray";
 import Section from "../../layouts/Section";
 import FeaturedStudentItem, {
@@ -7,7 +8,7 @@ import FeaturedStudentItem, {
 } from "./FeaturedStudentItem";
 
 const FeaturedStudents = () => {
-  const { value: featuredStudents } = useArray([]);
+  const { value: featuredStudents } = useArray(DUMMY__FEATURED__STUDENTS);
 
   return (
     <Section backgroundSection="#f2f6ff">

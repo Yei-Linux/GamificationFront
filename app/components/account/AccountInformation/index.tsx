@@ -31,7 +31,7 @@ const AccountInformation = ({
     <S.AccountInformation>
       <Wave direction="bottom">
         <S.Profile>
-          <Row width="fit-content">
+          <Row style={{ margin: "auto" }} width="fit-content">
             <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>
               <Row>
                 <Image alt="profile" width="150px" src={srcProfile} />

@@ -1,5 +1,6 @@
 import { Row } from "gamification-library";
 import React from "react";
+import { DUMMY__IDEAS__AND__PROJECT } from "../../../dummy/home";
 import { useArray } from "../../../hooks/useArray";
 import Section from "../../layouts/Section";
 import IdeasAndProjectsItem, {
@@ -9,18 +10,20 @@ import IdeasAndProjectsItem, {
 export interface IIdeasAndProjects {}
 
 const IdeasAndProjects = ({}: IIdeasAndProjects) => {
-  const { value: ideasItems } = useArray([]);
+  const { value: ideasItems } = useArray(DUMMY__IDEAS__AND__PROJECT);
 
   return (
     <Section>
       <Row>
-        {ideasItems.map((item: IIdeasAndProjectsItem, index: number) => (
-          <IdeasAndProjectsItem
-            key={index}
-            title={item.title}
-            description={item.description}
-          />
-        ))}
+        {ideasItems.map(
+          ({ title, description }: IIdeasAndProjectsItem, index: number) => (
+            <IdeasAndProjectsItem
+              key={index}
+              title={title}
+              description={description}
+            />
+          )
+        )}
       </Row>
     </Section>
   );

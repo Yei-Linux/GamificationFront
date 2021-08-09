@@ -3,6 +3,8 @@ import * as S from "./styles";
 
 import { Icon, Spacer, Title } from "gamification-library";
 import { themeCustom } from "../../../../styles/theme";
+import classNames from "classnames";
+import { TEXT__ALIGN__TO__FLEX } from "../../../constants/layouts";
 
 export interface TitleSectionProps {
   level: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
@@ -26,7 +28,13 @@ const TitleSection = ({
   fontWeight = "NORMAL",
 }: TitleSectionProps) => {
   return (
-    <S.TitleSection color={color} padding={padding} font={font}>
+    <S.TitleSection
+      className={classNames({ flexBehavior: iconId })}
+      $align={TEXT__ALIGN__TO__FLEX[align]}
+      $color={color}
+      $padding={padding}
+      $font={font}
+    >
       {iconId && <Icon size="20px" name={iconId} />}
       {iconId && <Spacer direction="right" />}
 

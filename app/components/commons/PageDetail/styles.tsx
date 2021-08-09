@@ -17,7 +17,7 @@ export const ListDesktop = styled.div`
   }
 `;
 
-export const DetailList= styled.div`
+export const DetailList = styled.div`
   padding: 1rem;
 `;
 
@@ -27,9 +27,7 @@ export const DetailTitle = styled.div`
   margin: 1rem 0;
 `;
 
-export const DetailContent = styled.div`
-  padding: 1rem;
-`;
+export const DetailContent = styled.div``;
 
 export const DetailViewAllButton = styled.div`
   display: block;

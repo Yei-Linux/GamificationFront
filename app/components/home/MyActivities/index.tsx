@@ -1,4 +1,5 @@
 import React from "react";
+import { DUMMY__MY__ACTIVITIES } from "../../../dummy/home";
 import { useArray } from "../../../hooks/useArray";
 import { IMyActivity } from "../../../types/home";
 import Section from "../../layouts/Section";
@@ -8,7 +9,7 @@ import SectionList from "./SectionList";
 import * as S from "./styles";
 
 const MyActivities = () => {
-  const { value: myActivities } = useArray([]);
+  const { value: myActivities } = useArray(DUMMY__MY__ACTIVITIES);
 
   return (
     <Section>
@@ -16,7 +17,12 @@ const MyActivities = () => {
         {myActivities.map(
           ({ title, iconId, sections }: IMyActivity, index: number) => (
             <S.Item key={index}>
-              <TitleSection level="h3" text={title} iconId={iconId} />
+              <TitleSection
+                align="CENTER"
+                level="h3"
+                text={title}
+                iconId={iconId}
+              />
               <SectionList sections={sections} />
             </S.Item>
           )

@@ -1,14 +1,20 @@
 import styled from "@emotion/styled";
 
 export const TitleSection = styled.div<{
-  color?: string;
-  padding?: string;
-  font?: string;
+  $align?: string;
+  $color?: string;
+  $padding?: string;
+  $font?: string;
 }>`
-  padding: ${({ padding }) => padding};
-  font-family: ${({ font }) => font};
+  padding: ${({ $padding }) => $padding};
+  font-family: ${({ $font }) => $font};
+
+  &.flexBehavior {
+    display: flex;
+    justify-content: ${({ $align }) => $align};
+  }
 
   * {
-    color: ${({ color }) => color};
+    color: ${({ $color }) => $color};
   }
 `;

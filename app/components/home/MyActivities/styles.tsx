@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { GridSection } from "../../../../styles/utilities/display";
 
 export const MyActivities = styled.div`
-  ${GridSection()}
+  ${GridSection("auto-fit")}
 `;
 
 export const Item = styled.div``;

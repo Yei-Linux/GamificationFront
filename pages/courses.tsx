@@ -10,13 +10,14 @@ const Courses = () => {
 
   return (
     <PageDetail
+      spacerSize={1}
       detailButtonText="All Themes"
       title="My Courses"
       items={themeCourses}
       listTitle="Themes"
       listButtonText="View"
     >
-      <CourseDetail/>
+      <CourseDetail />
     </PageDetail>
   );
 };

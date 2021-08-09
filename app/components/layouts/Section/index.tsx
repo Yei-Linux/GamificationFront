@@ -7,6 +7,7 @@ export interface ISectionProps {
   backgroundSection?: string;
   titleColor?: string;
   title?: string;
+  padding?: string;
 }
 
 const Section = ({
@@ -14,10 +15,17 @@ const Section = ({
   backgroundSection = "white",
   titleColor = "#5fa4ff",
   title = "Projects and Ideas",
+  padding = "0px",
 }: ISectionProps) => {
   return (
     <S.Section background={backgroundSection}>
-      <TitleSection color={titleColor} level="h1" align="CENTER" text={title} />
+      <TitleSection
+        padding={padding}
+        color={titleColor}
+        level="h1"
+        align="CENTER"
+        text={title}
+      />
 
       {children}
     </S.Section>
