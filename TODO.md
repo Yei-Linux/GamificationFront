@@ -6,11 +6,12 @@ My tasks to TODO
 
 
 ### In Progress
-- [ ] Improve all UI/UX Layouts
-- [ ] Improve componentes code, refactoring
 
 - [ ] Create SignIn Layout(19)
 - [ ] Create SignUp Layout(19)
+
+
+- [ ] Improve all UI/UX Layouts
 
 ### Done ✓
 
@@ -26,3 +27,4 @@ My tasks to TODO
 - [x] Create Exam Layout(17)
 
 - [x] Create My Courses Layout(17)
+- [x] Improve componentes code, refactoring
