@@ -34,33 +34,33 @@ const SignUpStepOne = ({ loginType, onClickNext }: ISignUpStepOne) => {
       <Form onSubmitForm={onClickNext}>
         <Form.Item label="Email" name="email">
           <Input
-            width="FULL"
-            border="ROUNDED"
-            shadow="NONE"
+            width="full"
+            border="lg"
+            shadow="none"
             placeholder="Ingresa tu email"
           />
         </Form.Item>
 
         <Form.Item label="Password" name="password">
           <Password
-            width="FULL"
-            border="ROUNDED"
-            shadow="NONE"
+            width="full"
+            border="lg"
+            shadow="none"
             placeholder="Ingresa tu contraseña"
           />
         </Form.Item>
 
         <Form.Item label="Fullname" name="fullname">
           <Input
-            width="FULL"
-            border="ROUNDED"
-            shadow="NONE"
+            width="full"
+            border="lg"
+            shadow="none"
             placeholder="Ingresa tus nombres"
           />
         </Form.Item>
 
         <Form.Item name="submit">
-          <Button style={{ margin: "auto" }} type="primary" border="ROUNDED">
+          <Button style={{ margin: "auto" }} variant="primary" border="lg">
             Siguiente
           </Button>
         </Form.Item>

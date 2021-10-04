@@ -19,13 +19,13 @@ const AccountGameInformation = ({
     <Section title="Mis Logros" backgroundSection="transparent">
       <Row>
         <S.GameItem>
-          <Card width="FULL" heigth="FULL">
+          <Card width="full" heigth="full">
             <AccountAchieves badges={badges} />
           </Card>
         </S.GameItem>
 
         <S.GameItem>
-          <Card width="FULL" heigth="FULL">
+          <Card width="full" heigth="full">
             <AccountSkills skills={skills} />
           </Card>
         </S.GameItem>

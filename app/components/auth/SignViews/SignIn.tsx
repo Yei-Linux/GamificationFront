@@ -20,7 +20,7 @@ export interface ISignIn {
 const SignIn = ({ loginType }: ISignIn) => {
   return (
     <S.Card>
-      <Card shadow="SMALL" border="LARGE">
+      <Card shadow="sm" border="lg">
         <S.CardBody>
           <Spacer direction="top" />
           <Row>
@@ -36,18 +36,18 @@ const SignIn = ({ loginType }: ISignIn) => {
           <Form>
             <Form.Item label="Email" name="email">
               <Input
-                width="FULL"
-                border="ROUNDED"
-                shadow="NONE"
+                width="full"
+                border="lg"
+                shadow="none"
                 placeholder="Ingresa tu email"
               />
             </Form.Item>
 
             <Form.Item label="Password" name="password">
               <Password
-                width="FULL"
-                border="ROUNDED"
-                shadow="NONE"
+                width="full"
+                border="lg"
+                shadow="none"
                 placeholder="Ingresa tu contraseña"
               />
             </Form.Item>
@@ -55,8 +55,8 @@ const SignIn = ({ loginType }: ISignIn) => {
             <Form.Item name="submit">
               <Button
                 style={{ margin: "auto" }}
-                type="primary"
-                border="ROUNDED"
+                variant="primary"
+                border="lg"
               >
                 {SIGN__TEXT__VALUES[loginType].buttonAuth}
               </Button>

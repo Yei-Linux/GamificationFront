@@ -1,8 +1,13 @@
 import { Note } from "gamification-library";
 import React from "react";
-import { IDeleteNote, IEventNote, INoteItemGeneralProps, ISaveEditNote } from "../../../types/notes";
+import {
+  IDeleteNote,
+  IEventNote,
+  INoteItemGeneralProps,
+  ISaveEditNote,
+} from "../../../types/notes";
 
-import * as S from "./styles"
+import * as S from "./styles";
 
 export interface INotesItemProps extends INoteItemGeneralProps {
   onChangeTitle: IEventNote;
@@ -25,7 +30,7 @@ const NotesItem = ({
   return (
     <S.NoteItem>
       <Note
-        titleDefaultValue={title}
+        titleDefaultValue={title || ""}
         onChangeTitle={onChangeTitle}
         defaultValue={text}
         onChange={onChange}

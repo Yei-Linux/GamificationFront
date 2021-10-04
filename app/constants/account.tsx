@@ -10,7 +10,7 @@ export const ACCOUNT__TABLE = [
     dataIndex: "user",
     render: (user: string) => (
       <RichText
-        fontWeight="BOLD"
+        fontWeight="bold"
         text={`[${user}](https://google.com?target=_blank)`}
       />
     ),
@@ -19,6 +19,6 @@ export const ACCOUNT__TABLE = [
   {
     title: "Puntos",
     dataIndex: "points",
-    render: (points: string) => <RichText fontWeight="BOLD" text={points} />,
+    render: (points: string) => <RichText fontWeight="bold" text={points} />,
   },
 ];

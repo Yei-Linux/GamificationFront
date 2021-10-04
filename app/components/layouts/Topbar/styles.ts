@@ -24,7 +24,7 @@ export const DesktopRow = styled.div`
 
 export const Topbar = styled.header`
   font-family: "Righteous", cursive;
-  border-bottom: 1px solid ${themeCustom.light.color.neutral.six};
+  border-bottom: 1px solid ${themeCustom.light.neutral[500]};
   padding: 5px 10px;
   width: 100%;
   height: 100%;

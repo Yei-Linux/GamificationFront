@@ -1,3 +1,4 @@
-import { palette } from "gamification-library";
+import { theme, componentsTheme } from "gamification-library";
 
-export const themeCustom = palette
+export const themeCustom = theme;
+export const componentsThemeCustom = componentsTheme;

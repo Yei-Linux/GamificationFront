@@ -21,8 +21,8 @@ const PageList = ({ title, items, buttonText = "View" }: PageListProps) => {
       <S.Header>
         <TitleSection
           padding="0px"
-          align="LEFT"
-          color={themeCustom.light.color.primary.one}
+          align="left"
+          color={themeCustom.light.primary.jordyBlue}
           level="h2"
           text={title}
         />
@@ -37,7 +37,7 @@ const PageList = ({ title, items, buttonText = "View" }: PageListProps) => {
             title={item.title}
             description={item.description}
           >
-            <Button width="NORMAL" border="ROUNDED">
+            <Button width="auto" border="lg">
               {buttonText}
             </Button>
           </List.Item>

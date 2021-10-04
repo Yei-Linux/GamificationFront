@@ -14,7 +14,7 @@ const BannerMySections = () => {
     <Wave direction="bottom">
       <Section
         backgroundSection="#7f9cf5"
-        titleColor={themeCustom.light.color.neutral.nine}
+        titleColor={themeCustom.light.neutral[800]}
       >
         <Slider
           slidesPerView={{

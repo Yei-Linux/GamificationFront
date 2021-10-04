@@ -20,7 +20,7 @@ const AccountAchieves = ({ badges }: IAccountAchieves) => {
   return (
     <S.AccountAchieves>
       <S.Title>
-        <Title textAlign="CENTER" fontWeight="LIGHT" level="h3">
+        <Title textAlign="center" fontWeight="light" level="h3">
           My Achieves
         </Title>
       </S.Title>

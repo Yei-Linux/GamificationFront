@@ -16,8 +16,8 @@ const Achievements = ({ title, children }: AchievementsProps) => {
       <S.Title>
         <TitleSection
           padding="0px"
-          align="LEFT"
-          color={themeCustom.light.color.secondary.three}
+          align="left"
+          color={themeCustom.light.secondary.prim}
           level="h4"
           text={title}
         />

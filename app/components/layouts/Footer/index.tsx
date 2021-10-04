@@ -9,7 +9,7 @@ const Footer = ({}: FooterProps) => {
   return (
     <Wave
       name="two"
-      background={themeCustom.light.color.primary.two}
+      background={themeCustom.light.primary.mediumPurple}
       direction="top"
     >
       <S.Footer>
@@ -27,12 +27,12 @@ const Footer = ({}: FooterProps) => {
             </Row>
           </Col>
           <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>
-            <Title textAlign="CENTER" level="h3">
+            <Title textAlign="center" level="h3">
               Handcrafted by © YeiLinux
             </Title>
           </Col>
           <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>
-            <RichText text="Made with Nextjs" textAlign="CENTER" />
+            <RichText text="Made with Nextjs" textAlign="center" />
           </Col>
         </Row>
       </S.Footer>

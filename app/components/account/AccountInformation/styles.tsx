@@ -4,7 +4,7 @@ import { themeCustom } from "../../../../styles/theme";
 export const AccountInformation = styled.div``;
 
 export const Profile= styled.div`
-  background-color: ${themeCustom.light.color.primary.one};
+  background-color: ${themeCustom.light.primary.jordyBlue};
 
   padding: 1rem;
 `;

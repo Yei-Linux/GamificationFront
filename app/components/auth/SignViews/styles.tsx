@@ -8,9 +8,9 @@ export const Card = styled.div``;
 
 export const CardBody = styled.div`
   max-width: 300px;
-  background-color: ${themeCustom.light.color.neutral.eight};
+  background-color: ${themeCustom.light.neutral[700]};
   h5 {
-    color: ${themeCustom.light.color.neutral.five};
+    color: ${themeCustom.light.neutral[400]};
   }
   padding: 1rem 0;
 `;

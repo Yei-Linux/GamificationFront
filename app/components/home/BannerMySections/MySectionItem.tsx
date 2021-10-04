@@ -16,9 +16,9 @@ const MySectionItem = ({ title, description, src }: IMySectionItem) => {
           background: "white",
           padding: "10px 0px",
         }}
-        width="NONE"
-        border="MEDIUM"
-        shadow="LARGE"
+        width="auto"
+        border="md"
+        shadow="lg"
       >
         <Card.Cover>
           <Image width="50px" alt="Carousel" src={src} />

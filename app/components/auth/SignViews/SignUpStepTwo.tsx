@@ -9,8 +9,8 @@ import {
 } from "gamification-library";
 import { SIGN__TEXT__VALUES } from "../../../constants/auth";
 import { TLoginType } from ".";
-import { colorLight } from "gamification-library/src/styles/theme";
 import * as S from "./styles";
+import { themeCustom } from "../../../../styles/theme";
 
 export interface ISignUpStepTwo {
   loginType: TLoginType;
@@ -24,7 +24,7 @@ const SignUpStepTwo = ({ loginType, onClickNext }: ISignUpStepTwo) => {
       <Row justifyContent="flex-start" height="auto">
         <S.ArrowBack
           onClick={() => onClickNext(0)}
-          fill={colorLight.primary.one}
+          fill={themeCustom.light.primary.jordyBlue}
           name="arrowLeft"
         />
       </Row>
@@ -32,33 +32,33 @@ const SignUpStepTwo = ({ loginType, onClickNext }: ISignUpStepTwo) => {
       <Form>
         <Form.Item label="Lastname" name="lastname">
           <Input
-            width="FULL"
-            border="ROUNDED"
-            shadow="NONE"
+            width="full"
+            border="lg"
+            shadow="none"
             placeholder="Ingresa tus apellidos"
           />
         </Form.Item>
 
         <Form.Item label="Specialization" name="specialization">
           <Input
-            width="FULL"
-            border="ROUNDED"
-            shadow="NONE"
+            width="full"
+            border="lg"
+            shadow="none"
             placeholder="Escoge tu especilizacion"
           />
         </Form.Item>
 
         <Form.Item label="Programming Language" name="language">
           <Input
-            width="FULL"
-            border="ROUNDED"
-            shadow="NONE"
+            width="full"
+            border="lg"
+            shadow="none"
             placeholder="Escoge tu lenguaje"
           />
         </Form.Item>
 
         <Form.Item name="submit">
-          <Button style={{ margin: "auto" }} type="primary" border="ROUNDED">
+          <Button style={{ margin: "auto" }} variant="primary" border="lg">
             {SIGN__TEXT__VALUES[loginType].buttonAuth}
           </Button>
         </Form.Item>

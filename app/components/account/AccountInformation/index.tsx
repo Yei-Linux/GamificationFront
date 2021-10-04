@@ -8,7 +8,7 @@ import {
   Wave,
 } from "gamification-library";
 import React from "react";
-import { themeCustom } from "../../../../styles/theme";
+import { componentsThemeCustom, themeCustom } from "../../../../styles/theme";
 
 import * as S from "./styles";
 
@@ -38,28 +38,25 @@ const AccountInformation = ({
               </Row>
               <Row>
                 <Tag
-                  shadow="MEDIUM"
-                  background={themeCustom.light.color.secondary.one}
-                  color={themeCustom.light.color.card.earth.color}
+                  shadow="none"
+                  background={themeCustom.light.secondary.nepal}
+                  color={componentsThemeCustom("light").card.earth.color}
                   text={lvl}
-                  textAlign="CENTER"
                 />
               </Row>
             </Col>
             <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>
               <S.ProfileName>
-                <Title fontWeight="LIGHT" level="h2" textAlign="CENTER">
-                  {userName}
-                </Title>
+                <Title level="h2">{userName}</Title>
               </S.ProfileName>
             </Col>
             <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>
               <Row>
                 <Tag
-                  shadow="MEDIUM"
-                  background={themeCustom.light.color.neutral.eight}
+                  shadow="none"
+                  background={themeCustom.light.neutral[700]}
                   text={email}
-                  textAlign="CENTER"
+                  textAlign="center"
                 />
               </Row>
             </Col>

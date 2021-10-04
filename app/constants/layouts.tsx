@@ -1,6 +1,6 @@
 export const TEXT__ALIGN__TO__FLEX = {
-  CENTER: "center",
-  JUSTIFY: "center",
-  LEFT: "flex-start",
-  RIGHT: "flex-end",
+  center: "center",
+  justify: "center",
+  left: "flex-start",
+  right: "flex-end",
 };

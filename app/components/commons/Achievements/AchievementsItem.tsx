@@ -24,10 +24,10 @@ const AchievementsItem = ({
       iconId={icondId}
       text={
         <S.CardContainer>
-          <Title textAlign="CENTER" level="h5">
+          <Title textAlign="center" level="h5">
             {title}
           </Title>
-          <RichText textAlign="CENTER" text={description} />
+          <RichText textAlign="center" text={description} />
         </S.CardContainer>
       }
     />

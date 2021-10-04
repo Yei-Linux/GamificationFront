@@ -26,7 +26,7 @@ const FeaturedStudentItem = ({
           <Card.Content title={title} description={description} />
 
           <Row>
-            <Button width="NORMAL" heigth="NORMAL">
+            <Button width="auto" heigth="auto">
               {buttonText}
             </Button>
           </Row>

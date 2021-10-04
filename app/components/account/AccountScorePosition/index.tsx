@@ -1,6 +1,6 @@
 import { Avatar, Row, Table, Tag } from "gamification-library";
 import React from "react";
-import { themeCustom } from "../../../../styles/theme";
+import { componentsThemeCustom, themeCustom } from "../../../../styles/theme";
 import { ACCOUNT__TABLE } from "../../../constants/account";
 import Section from "../../layouts/Section";
 
@@ -31,22 +31,22 @@ const AccountScorePosition = ({ userPositions }: IAccountScorePosition) => {
               ) => ({
                 position: (
                   <Tag
-                    shadow="MEDIUM"
-                    background={themeCustom.light.color.secondary.three}
-                    color={themeCustom.light.color.card.earth.color}
+                    shadow="md"
+                    background={themeCustom.light.secondary.nepal}
+                    color={componentsThemeCustom("light").card.earth.color}
                     text={`${index}`}
-                    textAlign="CENTER"
+                    textAlign="center"
                   />
                 ),
                 avatar: <Avatar src={avatar} />,
                 user: userName,
                 level: (
                   <Tag
-                    shadow="MEDIUM"
-                    background={themeCustom.light.color.secondary.one}
-                    color={themeCustom.light.color.card.earth.color}
+                    shadow="md"
+                    background={themeCustom.light.secondary.linkWater}
+                    color={componentsThemeCustom("light").card.earth.color}
                     text={lvl}
-                    textAlign="CENTER"
+                    textAlign="center"
                   />
                 ),
                 points,

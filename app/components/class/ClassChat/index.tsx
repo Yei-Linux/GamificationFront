@@ -34,8 +34,8 @@ const ClassChat = ({}: IClassChat) => {
       <S.Title>
         <TitleSection
           padding="0px"
-          align="LEFT"
-          color={themeCustom.light.color.primary.one}
+          align="left"
+          color={themeCustom.light.primary.jordyBlue}
           level="h2"
           text="Classroom Chat"
         />

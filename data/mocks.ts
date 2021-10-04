@@ -112,7 +112,7 @@ export const EXAM__QUESTIONS = [
           value: "one",
           icon: {
             name: "facebook",
-            fill: themeCustom.light.color.primary.one,
+            fill: themeCustom.light.primary.jordyBlue,
           },
         },
         {
@@ -120,7 +120,7 @@ export const EXAM__QUESTIONS = [
           value: "two",
           icon: {
             name: "facebook",
-            fill: themeCustom.light.color.primary.one,
+            fill: themeCustom.light.primary.jordyBlue,
           },
         },
         {
@@ -128,7 +128,7 @@ export const EXAM__QUESTIONS = [
           value: "three",
           icon: {
             name: "facebook",
-            fill: themeCustom.light.color.primary.one,
+            fill: themeCustom.light.primary.jordyBlue,
           },
         },
       ],

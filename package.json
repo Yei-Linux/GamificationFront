@@ -15,7 +15,8 @@
     "@types/react-dom": "^17.0.9",
     "classnames": "^2.3.1",
     "file-loader": "^6.2.0",
-    "gamification-library": "^1.0.60",
+    "gamification-library": "1.0.73",
+    "my-awesome-greeter": "^1.0.2",
     "next": "11.0.1",
     "next-transpile-modules": "^8.0.0"
   },

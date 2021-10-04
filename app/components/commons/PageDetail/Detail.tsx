@@ -28,14 +28,14 @@ const Detail = ({
         <Row justifyContent="space-between">
           <TitleSection
             padding="0px"
-            align="LEFT"
-            color={themeCustom.light.color.primary.one}
+            align="left"
+            color={themeCustom.light.primary.jordyBlue}
             level="h2"
             text={title}
           />
 
           <S.DetailViewAllButton>
-            <Button onClick={toggle} width="NORMAL" border="MEDIUM">
+            <Button onClick={toggle} width="auto" border="md">
               {buttonText}
             </Button>
           </S.DetailViewAllButton>

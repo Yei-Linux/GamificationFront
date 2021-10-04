@@ -10,22 +10,22 @@ export interface TitleSectionProps {
   level: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   text: string;
   iconId?: string;
-  align?: "CENTER" | "JUSTIFY" | "LEFT" | "RIGHT";
+  align?: "center" | "justify" | "left" | "right";
   color?: string;
   padding?: string;
   font?: string;
-  fontWeight?: "BOLD" | "NORMAL";
+  fontWeight?: "bold" | "normal";
 }
 
 const TitleSection = ({
   level,
   text,
   iconId,
-  align = "LEFT",
-  color = themeCustom.light.color.primary.one,
+  align = "left",
+  color = themeCustom.light.primary.jordyBlue,
   padding = "1rem",
   font = '"Righteous", cursive',
-  fontWeight = "NORMAL",
+  fontWeight = "normal",
 }: TitleSectionProps) => {
   return (
     <S.TitleSection

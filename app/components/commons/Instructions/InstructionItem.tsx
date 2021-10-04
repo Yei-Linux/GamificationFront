@@ -26,7 +26,7 @@ const InstructionItem = ({
       <S.InstructionsItemContainer>
         <TitleSection
           level="h3"
-          color={themeCustom.light.color.primary.one}
+          color={themeCustom.light.primary.jordyBlue}
           text={mainTitle}
         />
 
@@ -37,14 +37,14 @@ const InstructionItem = ({
         <Row height="auto">
           <TitleSection
             level="h3"
-            color={themeCustom.light.color.secondary.three}
+            color={themeCustom.light.secondary.prim}
             text={subTitle}
           />
         </Row>
 
         {description && (
           <Row height="auto">
-            <RichText textAlign="CENTER" text={description} />
+            <RichText textAlign="center" text={description} />
           </Row>
         )}
 

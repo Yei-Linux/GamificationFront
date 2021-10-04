@@ -12,7 +12,7 @@ export interface ISignUp {
 const SignUp = ({ loginType }: ISignUp) => {
   return (
     <S.Card>
-      <Card shadow="SMALL" border="LARGE">
+      <Card shadow="sm" border="lg">
         <S.CardBody>
           <S.StepsSignUp>
             <Steps.Body>

@@ -16,7 +16,7 @@ const AccountSkills = ({ skills }: IAccountSkills) => {
   return (
     <S.AccountSkills>
       <S.Title>
-        <Title textAlign="CENTER" fontWeight="LIGHT" level="h3">
+        <Title textAlign="center" fontWeight="light" level="h3">
           My Skills
         </Title>
       </S.Title>
