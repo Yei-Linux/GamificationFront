@@ -18,7 +18,7 @@ const MyActivities = () => {
           ({ title, iconId, sections }: IMyActivity, index: number) => (
             <S.Item key={index}>
               <TitleSection
-                align="CENTER"
+                align="center"
                 level="h3"
                 text={title}
                 iconId={iconId}

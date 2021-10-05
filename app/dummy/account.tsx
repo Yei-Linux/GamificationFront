@@ -18,13 +18,13 @@ export const DUMMY__BADGES = [
     title: "Badge one",
     icons: [
       {
-        name: "book",
+        name: "books_folder",
       },
       {
-        name: "book",
+        name: "books_folder",
       },
       {
-        name: "book",
+        name: "books_folder",
       },
     ],
   },
@@ -34,17 +34,17 @@ export const DUMMY__SKILLS = [
   {
     title: "Javascript",
     description: "Mutation",
-    name: "book",
+    name: "books_folder",
   },
   {
     title: "Javascript",
     description: "Mutation",
-    name: "book",
+    name: "books_folder",
   },
   {
     title: "Javascript",
     description: "Mutation",
-    name: "book",
+    name: "books_folder",
   },
 ];
 

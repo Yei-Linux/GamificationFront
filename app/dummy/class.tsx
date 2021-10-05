@@ -9,19 +9,19 @@ export const DUMMY_CLASS = {
     {
       title: "Scrapping",
       description: "Get web content",
-      icondId: "eye",
+      icondId: "preview",
       themeType: "sky" as const,
     },
     {
       title: "Scrapping",
       description: "Get web content",
-      icondId: "eye",
+      icondId: "preview",
       themeType: "warm" as const,
     },
     {
       title: "Scrapping",
       description: "Get web content",
-      icondId: "eye",
+      icondId: "preview",
       themeType: "skin" as const,
     },
   ],

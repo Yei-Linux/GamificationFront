@@ -25,7 +25,7 @@ const SignUpStepTwo = ({ loginType, onClickNext }: ISignUpStepTwo) => {
         <S.ArrowBack
           onClick={() => onClickNext(0)}
           fill={themeCustom.light.primary.jordyBlue}
-          name="arrowLeft"
+          name="arrow__left"
         />
       </Row>
 

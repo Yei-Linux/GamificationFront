@@ -2,6 +2,7 @@ const withImages = require("next-images");
 var webpack = require("webpack");
 
 const withTM = require("next-transpile-modules")(["suneditor"]);
+const internalNodeModulesRegExp = /lib(?!\/(?!.*(js|jsx)))/;
 
 module.exports = withTM(
   withImages({
@@ -46,6 +47,20 @@ module.exports = withTM(
               },
             },
           ],
+        },
+        {
+          test: /\.js|jsx$/,
+          include: [internalNodeModulesRegExp],
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                "next/babel",
+                "@babel/preset-flow",
+                "@babel/preset-env",
+              ],
+            },
+          },
         }
       );
 

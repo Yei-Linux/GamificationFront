@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
     "baseUrl": "src",
     "isolatedModules": true,
     "allowJs": true,
-    "module": "esnext",
-    "target": "esnext",
     "jsx": "preserve",
-    "lib": ["dom", "es2017"],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
@@ -24,6 +27,16 @@
       }
     ]
   },
-  "exclude": ["node_modules", ".next", "dist"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.jsx", "**/*.js"]
+  "exclude": [
+    "node_modules",
+    ".next",
+    "dist"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.jsx",
+    "**/*.js"
+  ]
 }

@@ -1,4 +1,5 @@
 {
+  "sourceType": "unambiguous",
   "presets": [
     "next/babel",
     "@babel/preset-env",

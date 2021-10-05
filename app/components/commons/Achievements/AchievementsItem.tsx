@@ -13,7 +13,7 @@ export interface IAchievementsItem {
 const AchievementsItem = ({
   title,
   description,
-  icondId = "eye",
+  icondId = "preview",
   themeType = "warm",
 }: IAchievementsItem) => {
   return (

@@ -23,7 +23,7 @@ const Section = ({
         padding={padding}
         color={titleColor}
         level="h1"
-        align="CENTER"
+        align="center"
         text={title}
       />
 

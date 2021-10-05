@@ -64,7 +64,7 @@ export const DUMMY__FEATURED__STUDENTS = [
 export const DUMMY__MY__ACTIVITIES = [
   {
     title: "My classes",
-    iconId: "book",
+    iconId: "books_folder",
     sections: [
       {
         title: "Main title",
@@ -80,7 +80,7 @@ export const DUMMY__MY__ACTIVITIES = [
   },
   {
     title: "My notes",
-    iconId: "postit",
+    iconId: "plane",
     sections: [
       {
         title: "Main title",
@@ -96,7 +96,7 @@ export const DUMMY__MY__ACTIVITIES = [
   },
   {
     title: "Doing Exam",
-    iconId: "rocket",
+    iconId: "rocket_new",
     sections: [
       {
         title: "Main title",

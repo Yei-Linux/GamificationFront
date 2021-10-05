@@ -39,22 +39,22 @@ const MenuAside = ({ onClose, open }: MenuAsideProps) => {
           isOpen
           title="Home"
           href="/"
-          icon={<Icon name="listitem" />}
+          icon={<Icon name="bullet__item" />}
         ></Menu.SubMenu>
         <Menu.SubMenu
           title="My account"
           href="/account"
-          icon={<Icon name="listitem" />}
+          icon={<Icon name="bullet__item" />}
         ></Menu.SubMenu>
         <Menu.SubMenu
           title="My courses"
           href="/courses"
-          icon={<Icon name="listitem" />}
+          icon={<Icon name="bullet__item" />}
         ></Menu.SubMenu>
         <Menu.SubMenu
           title="My Exams"
           href="/exams"
-          icon={<Icon name="listitem" />}
+          icon={<Icon name="bullet__item" />}
         ></Menu.SubMenu>
       </Menu>
     </Sider>

@@ -17,7 +17,7 @@ const SectionItem = ({ title, description, buttonText }: ISectionItem) => {
         title={title}
         description={description}
       >
-        <Button width="NORMAL" border="ROUNDED">
+        <Button width="auto" border="lg">
           {buttonText}
         </Button>
       </List.Item>

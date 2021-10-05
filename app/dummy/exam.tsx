@@ -89,7 +89,7 @@ export const DUMMY__EXAM__QUESTIONS = [
           value: "one",
           icon: {
             name: "facebook",
-            fill: themeCustom.light.primary.one,
+            fill: themeCustom.light.primary.jordyBlue,
           },
         },
         {
@@ -97,7 +97,7 @@ export const DUMMY__EXAM__QUESTIONS = [
           value: "two",
           icon: {
             name: "facebook",
-            fill: themeCustom.light.primary.one,
+            fill: themeCustom.light.primary.jordyBlue,
           },
         },
         {
@@ -105,7 +105,7 @@ export const DUMMY__EXAM__QUESTIONS = [
           value: "three",
           icon: {
             name: "facebook",
-            fill: themeCustom.light.primary.one,
+            fill: themeCustom.light.primary.jordyBlue,
           },
         },
       ],
