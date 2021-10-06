@@ -11,7 +11,7 @@ const FeaturedStudents = () => {
   const { value: featuredStudents } = useArray(DUMMY__FEATURED__STUDENTS);
 
   return (
-    <Section backgroundSection="#f2f6ff">
+    <Section title="Featured Users" backgroundSection="#f2f6ff">
       <Row>
         {featuredStudents.map(
           (

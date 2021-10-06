@@ -13,7 +13,7 @@ const IdeasAndProjects = ({}: IIdeasAndProjects) => {
   const { value: ideasItems } = useArray(DUMMY__IDEAS__AND__PROJECT);
 
   return (
-    <Section>
+    <Section title="Interesting Metrics">
       <Row>
         {ideasItems.map(
           ({ title, description }: IIdeasAndProjectsItem, index: number) => (

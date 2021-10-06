@@ -37,16 +37,16 @@ const Topbar = ({ handleOpenMenu }: TopbarProps) => {
         <S.TopbarRight>
           <S.PhoneRow>
             <Row>
-              <Icon onClick={handleOpenMenu} name="menu" size="30px" />
+              <Icon onClick={handleOpenMenu} name="hamburger" size="30px" />
             </Row>
           </S.PhoneRow>
           <S.DesktopRow>
             <Row>
-              <Icon onClick={handleOpenMenu} name="menu" size="20px" />
+              <Icon onClick={handleOpenMenu} name="hamburger" size="20px" />
               <Spacer direction="left" />
-              <Icon name="notifications" size="20px" />
+              <Icon name="remind" size="20px" />
               <Spacer direction="left" />
-              <Icon name="settings" size="20px" />
+              <Icon name="setting" size="20px" />
               <Spacer direction="left" />
               <Spacer direction="left" />
               <Avatar src="https://iconape.com/wp-content/png_logo_vector/avatar-6.png" />

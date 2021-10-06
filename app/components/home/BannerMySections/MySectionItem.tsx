@@ -1,30 +1,37 @@
-import { Card, Image } from "gamification-library";
+import { Card, Icon, Link as CustomLink } from "gamification-library";
 import React from "react";
 import * as S from "./styles";
+import Link from "next/link";
 
 export interface IMySectionItem {
   title: string;
   description: string;
-  src: string;
+  iconId: string;
+  id: string;
 }
 
-const MySectionItem = ({ title, description, src }: IMySectionItem) => {
+const MySectionItem = ({ title, description, iconId, id }: IMySectionItem) => {
   return (
     <S.MySectionItem className="keen-slider__slide">
-      <Card
-        style={{
-          background: "white",
-          padding: "10px 0px",
-        }}
-        width="auto"
-        border="md"
-        shadow="lg"
-      >
-        <Card.Cover>
-          <Image width="50px" alt="Carousel" src={src} />
-        </Card.Cover>
-        <Card.Content title={title} description={description} />
-      </Card>
+      <Link href={`/challenges/${id}`} passHref>
+        <CustomLink href={`/challenges/${id}`}>
+          <Card
+            className="mysectionitem__card"
+            style={{
+              background: "white",
+              padding: "10px 0px",
+            }}
+            width="auto"
+            border="md"
+            shadow="lg"
+          >
+            <Card.Cover>
+              <Icon size="30px" name={iconId} />
+            </Card.Cover>
+            <Card.Content title={title} description={description} />
+          </Card>
+        </CustomLink>
+      </Link>
     </S.MySectionItem>
   );
 };

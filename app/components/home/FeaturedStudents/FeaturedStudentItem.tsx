@@ -1,6 +1,7 @@
-import { Avatar, Button, Card, Row } from "gamification-library";
+import { Avatar, Button, Card, Row, Link as CustomLink } from "gamification-library";
 import React from "react";
 import * as S from "./styles";
+import Link from "next/link";
 
 export interface IFeaturedStudentItem {
   title: string;
@@ -17,21 +18,25 @@ const FeaturedStudentItem = ({
 }: IFeaturedStudentItem) => {
   return (
     <S.FeaturedStudentItem>
-      <Card>
-        <S.CardBody>
-          <Row>
-            <Avatar background="white" src={avatar} />
-          </Row>
+      <Link href={`/account/${title}`} passHref>
+        <CustomLink href={`/account/${title}`}>
+          <Card>
+            <S.CardBody>
+              <Row>
+                <Avatar background="white" src={avatar} />
+              </Row>
 
-          <Card.Content title={title} description={description} />
+              <Card.Content title={title} description={description} />
 
-          <Row>
-            <Button width="auto" heigth="auto">
-              {buttonText}
-            </Button>
-          </Row>
-        </S.CardBody>
-      </Card>
+              <Row>
+                <Button width="auto" heigth="auto">
+                  {buttonText}
+                </Button>
+              </Row>
+            </S.CardBody>
+          </Card>
+        </CustomLink>
+      </Link>
     </S.FeaturedStudentItem>
   );
 };

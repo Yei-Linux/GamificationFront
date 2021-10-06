@@ -9,7 +9,8 @@ const Footer = ({}: FooterProps) => {
   return (
     <Wave
       name="two"
-      background={themeCustom.light.primary.mediumPurple}
+      isWaveLikeBackground
+      background={themeCustom.light.primary.jordyBlue}
       direction="top"
     >
       <S.Footer>

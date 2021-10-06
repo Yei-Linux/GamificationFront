@@ -37,8 +37,8 @@ const SignIn = ({ loginType }: ISignIn) => {
             <Form.Item label="Email" name="email">
               <Input
                 width="full"
-                border="lg"
-                shadow="none"
+                border="sm"
+                shadow="sm"
                 placeholder="Ingresa tu email"
               />
             </Form.Item>
@@ -46,8 +46,8 @@ const SignIn = ({ loginType }: ISignIn) => {
             <Form.Item label="Password" name="password">
               <Password
                 width="full"
-                border="lg"
-                shadow="none"
+                border="sm"
+                shadow="sm"
                 placeholder="Ingresa tu contraseña"
               />
             </Form.Item>

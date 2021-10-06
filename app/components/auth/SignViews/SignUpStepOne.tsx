@@ -18,6 +18,11 @@ export interface ISignUpStepOne {
 }
 
 const SignUpStepOne = ({ loginType, onClickNext }: ISignUpStepOne) => {
+  const handleGetDataOfFirstStep = (values: any) => {
+    console.log(values);
+    onClickNext(values);
+  };
+
   return (
     <Fragment>
       <Spacer direction="top" />
@@ -31,12 +36,12 @@ const SignUpStepOne = ({ loginType, onClickNext }: ISignUpStepOne) => {
         </Title>
       </Row>
 
-      <Form onSubmitForm={onClickNext}>
+      <Form onSubmitForm={handleGetDataOfFirstStep}>
         <Form.Item label="Email" name="email">
           <Input
             width="full"
-            border="lg"
-            shadow="none"
+            border="sm"
+            shadow="sm"
             placeholder="Ingresa tu email"
           />
         </Form.Item>
@@ -44,8 +49,8 @@ const SignUpStepOne = ({ loginType, onClickNext }: ISignUpStepOne) => {
         <Form.Item label="Password" name="password">
           <Password
             width="full"
-            border="lg"
-            shadow="none"
+            border="sm"
+            shadow="sm"
             placeholder="Ingresa tu contraseña"
           />
         </Form.Item>
@@ -53,8 +58,8 @@ const SignUpStepOne = ({ loginType, onClickNext }: ISignUpStepOne) => {
         <Form.Item label="Fullname" name="fullname">
           <Input
             width="full"
-            border="lg"
-            shadow="none"
+            border="sm"
+            shadow="sm"
             placeholder="Ingresa tus nombres"
           />
         </Form.Item>

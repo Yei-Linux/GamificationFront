@@ -33,8 +33,8 @@ const SignUpStepTwo = ({ loginType, onClickNext }: ISignUpStepTwo) => {
         <Form.Item label="Lastname" name="lastname">
           <Input
             width="full"
-            border="lg"
-            shadow="none"
+            border="sm"
+            shadow="sm"
             placeholder="Ingresa tus apellidos"
           />
         </Form.Item>
@@ -42,8 +42,8 @@ const SignUpStepTwo = ({ loginType, onClickNext }: ISignUpStepTwo) => {
         <Form.Item label="Specialization" name="specialization">
           <Input
             width="full"
-            border="lg"
-            shadow="none"
+            border="sm"
+            shadow="sm"
             placeholder="Escoge tu especilizacion"
           />
         </Form.Item>
@@ -51,8 +51,8 @@ const SignUpStepTwo = ({ loginType, onClickNext }: ISignUpStepTwo) => {
         <Form.Item label="Programming Language" name="language">
           <Input
             width="full"
-            border="lg"
-            shadow="none"
+            border="sm"
+            shadow="sm"
             placeholder="Escoge tu lenguaje"
           />
         </Form.Item>

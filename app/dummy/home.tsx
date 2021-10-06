@@ -1,42 +1,42 @@
 export const DUMMY__MY__SECTIONS = [
   {
-    title: "Hard Challenges",
-    description: "This is my description",
-    src:
-      "https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png",
+    title: "What's Your Name?",
+    description: "String practice: Print your name in the console.",
+    id: "a627b738-07bd-4bff-a553-6c9fe62d162c",
+    iconId: "code",
   },
   {
-    title: "Hard Challenges",
-    description: "This is my description",
-    src:
-      "https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png",
+    title: "What's Your Name?",
+    description: "String practice: Print your name in the console.",
+    id: "c7a469be-d3b8-42f1-aaf1-ac5253c7b821",
+    iconId: "code",
   },
   {
-    title: "Hard Challenges",
-    description: "This is my description",
-    src:
-      "https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png",
+    title: "What's Your Name?",
+    description: "String practice: Print your name in the console.",
+    id: "5628e497-020f-47e3-b411-3f009beadfb5",
+    iconId: "code",
   },
   {
-    title: "Hard Challenges",
-    description: "This is my description",
-    src:
-      "https://i.pinimg.com/originals/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.png",
+    title: "What's Your Name?",
+    description: "String practice: Print your name in the console.",
+    id: "871a3eb1-7979-4f0e-99fb-3fb6d7a8e106",
+    iconId: "code",
   },
 ];
 
 export const DUMMY__IDEAS__AND__PROJECT = [
   {
-    title: "Title",
-    description: "Description",
+    title: "Total Players",
+    description: "350",
   },
   {
-    title: "Title",
-    description: "Description",
+    title: "My Lvl",
+    description: "7",
   },
   {
-    title: "Title",
-    description: "Description",
+    title: "My Score",
+    description: "1500",
   },
 ];
 
