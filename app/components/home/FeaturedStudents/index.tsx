@@ -15,14 +15,14 @@ const FeaturedStudents = () => {
       <Row>
         {featuredStudents.map(
           (
-            { title, description, buttonText, avatar }: IFeaturedStudentItem,
+            { id, userName, lvlDetails, avatar }: IFeaturedStudentItem,
             index: number
           ) => (
             <FeaturedStudentItem
               key={index}
-              title={title}
-              description={description}
-              buttonText={buttonText}
+              id={id}
+              userName={userName}
+              lvlDetails={lvlDetails}
               avatar={avatar}
             />
           )

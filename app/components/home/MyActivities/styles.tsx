@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "gamification-library";
 import { GridSection } from "../../../../styles/utilities/display";
 
 export const MyActivities = styled.div`
@@ -22,3 +23,7 @@ export const SectionList = styled.div`
   width: 100%;
   align-items: center;
 `;
+
+export const ViewAllLink = styled(Link)`
+  text-decoration: underline;
+`

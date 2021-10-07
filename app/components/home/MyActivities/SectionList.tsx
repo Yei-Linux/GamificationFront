@@ -5,20 +5,24 @@ import * as S from "./styles";
 
 export interface SectionMyActivityListProps {
   sections: ISectionItem[];
+  prefixUrl: string;
 }
 
-const SectionMyActivityList = ({ sections }: SectionMyActivityListProps) => {
+const SectionMyActivityList = ({
+  sections,
+  prefixUrl,
+}: SectionMyActivityListProps) => {
   const { value: sectionList } = useArray(sections);
 
   return (
     <S.SectionList>
       {sectionList.map(
-        ({ title, description, buttonText }: ISectionItem, index: number) => (
+        ({ title, description, id }: ISectionItem, index: number) => (
           <SectionItem
             key={index}
             title={title}
             description={description}
-            buttonText={buttonText}
+            url={`${prefixUrl}/${id}`}
           />
         )
       )}

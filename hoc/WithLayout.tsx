@@ -1,13 +1,15 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/display-name */
-import { Layout } from "gamification-library";
+import { Icon, Layout, Sticky } from "gamification-library";
 
 import React, { Fragment, useState } from "react";
+import PlayerInfo from "../app/components/commons/PlayerInfo";
 import Footer from "../app/components/layouts/Footer";
 import MenuAside from "../app/components/layouts/MenuAside";
 import Topbar from "../app/components/layouts/Topbar";
 
 interface Props {
+  hasStickyProfile?: boolean;
   hasHeader?: boolean;
   HeaderChildren?: React.ElementType;
   hasFooter?: boolean;
@@ -15,6 +17,7 @@ interface Props {
 }
 
 const WithLayout = ({
+  hasStickyProfile = true,
   hasHeader,
   HeaderChildren = Topbar,
   hasFooter,
@@ -26,9 +29,26 @@ const WithLayout = ({
   return (
     <Fragment>
       <MenuAside onClose={toggle} open={open} />
+
+      {hasStickyProfile && (
+        <Sticky
+          stickyItems={[
+            {
+              stickyContent: (
+                <Fragment>
+                  <Icon name="controls" size="20px" />
+                </Fragment>
+              ),
+              hasHideContent: true,
+              stickyHidden: <PlayerInfo />,
+            },
+          ]}
+        />
+      )}
+
       <Layout>
         {hasHeader && (
-          <Layout.Header>
+          <Layout.Header isSticky>
             {<HeaderChildren handleOpenMenu={toggle} />}
           </Layout.Header>
         )}
@@ -42,6 +62,7 @@ const WithLayout = ({
 };
 
 WithLayout.defaultProps = {
+  hasStickyProfile: true,
   hasHeader: true,
   hasFooter: true,
   HeaderChildren: Topbar,

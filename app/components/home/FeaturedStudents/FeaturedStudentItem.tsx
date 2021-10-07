@@ -1,42 +1,68 @@
-import { Avatar, Button, Card, Row, Link as CustomLink } from "gamification-library";
+import {
+  Avatar,
+  Button,
+  Card,
+  Row,
+  Link as CustomLink,
+  RichText,
+} from "gamification-library";
 import React from "react";
 import * as S from "./styles";
-import Link from "next/link";
+import StudentTagsLvl from "./StudentTagsLvl";
+import { themeCustom } from "../../../../styles/theme";
+
+interface ILvlDetails {
+  lvl: number;
+  score: number;
+}
 
 export interface IFeaturedStudentItem {
-  title: string;
-  description: string;
+  id: string;
+  lvlDetails: ILvlDetails;
+  userName: string;
   avatar: string;
-  buttonText?: string;
 }
 
 const FeaturedStudentItem = ({
-  title,
-  description,
+  userName,
+  lvlDetails: { lvl, score },
   avatar,
-  buttonText,
 }: IFeaturedStudentItem) => {
+  const buildTagsOfUser = () => [
+    {
+      text: `Lvl ${lvl}`,
+      background: themeCustom.light.neutral[700],
+      color: themeCustom.light.neutral[300],
+    },
+    {
+      text: `Pts ${score}`,
+      background: themeCustom.light.primary.mediumPurple,
+      color: themeCustom.light.neutral[800],
+    },
+  ];
+
   return (
     <S.FeaturedStudentItem>
-      <Link href={`/account/${title}`} passHref>
-        <CustomLink href={`/account/${title}`}>
-          <Card>
-            <S.CardBody>
-              <Row>
-                <Avatar background="white" src={avatar} />
-              </Row>
+      <Card>
+        <S.CardBody>
+          <Row>
+            <Avatar background="white" src={avatar} />
+          </Row>
 
-              <Card.Content title={title} description={description} />
+          <Card.Content
+            title={<RichText text={userName} width="full" textAlign="center" />}
+            description={<StudentTagsLvl tags={buildTagsOfUser()} />}
+          />
 
-              <Row>
-                <Button width="auto" heigth="auto">
-                  {buttonText}
-                </Button>
-              </Row>
-            </S.CardBody>
-          </Card>
-        </CustomLink>
-      </Link>
+          <Row>
+            <CustomLink isExternal href={`/account/${userName}`}>
+              <Button width="auto" heigth="auto">
+                View Profile
+              </Button>
+            </CustomLink>
+          </Row>
+        </S.CardBody>
+      </Card>
     </S.FeaturedStudentItem>
   );
 };
