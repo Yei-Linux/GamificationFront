@@ -7,10 +7,11 @@ import Section from "../../layouts/Section";
 import * as S from "./styles";
 
 export interface IUserPosition {
+  position: number;
   avatar: string;
   userName: string;
-  lvl: string;
-  points: string;
+  lvl: number;
+  score: number;
 }
 
 export interface IAccountScorePosition {
@@ -25,16 +26,13 @@ const AccountScorePosition = ({ userPositions }: IAccountScorePosition) => {
           <Table
             columns={ACCOUNT__TABLE}
             data={userPositions.map(
-              (
-                { avatar, userName, lvl, points }: IUserPosition,
-                index: number
-              ) => ({
+              ({ position, avatar, userName, lvl, score }: IUserPosition) => ({
                 position: (
                   <Tag
                     shadow="md"
                     background={themeCustom.light.secondary.nepal}
                     color={componentsThemeCustom("light").card.earth.color}
-                    text={`${index}`}
+                    text={`${position}`}
                     textAlign="center"
                   />
                 ),
@@ -45,11 +43,11 @@ const AccountScorePosition = ({ userPositions }: IAccountScorePosition) => {
                     shadow="md"
                     background={themeCustom.light.secondary.linkWater}
                     color={componentsThemeCustom("light").card.earth.color}
-                    text={lvl}
+                    text={`Lvl ${lvl}`}
                     textAlign="center"
                   />
                 ),
-                points,
+                score,
               })
             )}
           />

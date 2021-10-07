@@ -3,6 +3,7 @@ import {
   Col,
   Icon,
   Image,
+  Link,
   ProgressBar,
   RichText,
   Row,
@@ -15,12 +16,20 @@ import { componentsThemeCustom, themeCustom } from "../../../../styles/theme";
 
 import * as S from "./styles";
 
+export interface ISocialNetwork {
+  iconId: string;
+  url: string;
+}
+
 export interface IAccountInformation {
-  srcProfile?: string;
-  lvl: string;
+  photo?: string;
   userName: string;
-  email?: string;
-  experiencePercent: number;
+  role: string;
+  lvl: number;
+  scorePercentBar: number;
+  score?: number;
+  scoreToNextLvl?: number;
+  socialNetworks?: ISocialNetwork[];
 
   isShowOnlyImportantContent?: boolean;
   background?: string;
@@ -28,10 +37,15 @@ export interface IAccountInformation {
 }
 
 const MainAccountInformation = ({
-  srcProfile,
-  lvl,
+  photo,
   userName,
-  experiencePercent,
+  role,
+  lvl,
+  scorePercentBar,
+  score,
+  scoreToNextLvl,
+  socialNetworks,
+
   isShowOnlyImportantContent = false,
   background = themeCustom.light.primary.jordyBlue,
   color = themeCustom.light.neutral[800],
@@ -40,9 +54,9 @@ const MainAccountInformation = ({
     <S.Profile $background={background}>
       <Row style={{ margin: "auto" }} width="fit-content">
         <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>
-          {!isShowOnlyImportantContent && srcProfile && (
+          {!isShowOnlyImportantContent && photo && (
             <Row>
-              <Image alt="profile" width="150px" src={srcProfile} />
+              <Image alt="profile" width="150px" src={photo} />
             </Row>
           )}
           <Row>
@@ -53,7 +67,7 @@ const MainAccountInformation = ({
           <Spacer direction="bottom" />
           <Row>
             <S.ProfileName $color={color}>
-              <RichText text="FullStack" />
+              <RichText text={role} />
             </S.ProfileName>
           </Row>
           <Spacer direction="bottom" />
@@ -62,16 +76,13 @@ const MainAccountInformation = ({
               shadow="none"
               background={themeCustom.light.extended.code}
               color={componentsThemeCustom("light").card.earth.color}
-              text={lvl}
+              text={`Level ${lvl}`}
             />
           </Row>
         </Col>
 
         <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>
-          <ProgressBar
-            percent={experiencePercent}
-            backgroundProgress="#c8d9ff"
-          />
+          <ProgressBar percent={scorePercentBar} backgroundProgress="#c8d9ff" />
         </Col>
 
         <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>
@@ -81,7 +92,7 @@ const MainAccountInformation = ({
                 shadow="none"
                 color={themeCustom.light.neutral[0]}
                 background={themeCustom.light.neutral[700]}
-                text="Score: 1500"
+                text={`Score: ${score}`}
                 textAlign="center"
               />
             </S.LvlTagAccountItem>
@@ -91,7 +102,7 @@ const MainAccountInformation = ({
                 shadow="none"
                 color={themeCustom.light.neutral[0]}
                 background={themeCustom.light.neutral[700]}
-                text="To Next Lvl: 50"
+                text={`To Next Lvl: ${scoreToNextLvl}`}
                 textAlign="center"
               />
             </S.LvlTagAccountItem>
@@ -101,21 +112,15 @@ const MainAccountInformation = ({
         {!isShowOnlyImportantContent && (
           <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>
             <Row height="auto">
-              <S.SocialNetworkItem
-                className={classNames("flex", "justify-center")}
-              >
-                <Icon name="github" />
-              </S.SocialNetworkItem>
-              <S.SocialNetworkItem
-                className={classNames("flex", "justify-center")}
-              >
-                <Icon name="twitter" />
-              </S.SocialNetworkItem>
-              <S.SocialNetworkItem
-                className={classNames("flex", "justify-center")}
-              >
-                <Icon name="linkedin" />
-              </S.SocialNetworkItem>
+              {socialNetworks?.map(({ url, iconId }, index: number) => (
+                <Link href={url} isExternal key={index}>
+                  <S.SocialNetworkItem
+                    className={classNames("flex", "justify-center")}
+                  >
+                    <Icon name={iconId} />
+                  </S.SocialNetworkItem>
+                </Link>
+              ))}
             </Row>
           </Col>
         )}

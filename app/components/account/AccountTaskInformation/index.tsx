@@ -5,20 +5,20 @@ import Section from "../../layouts/Section";
 import * as S from "./styles";
 
 export interface ITask {
-  numberTasks: number;
+  numberTasks: string;
   title: string;
 }
 
 export interface AccountTaskInformationProps {
-  tasks: ITask[];
+  metrics: ITask[];
 }
 
-const AccountTaskInformation = ({ tasks }: AccountTaskInformationProps) => {
+const AccountTaskInformation = ({ metrics }: AccountTaskInformationProps) => {
   return (
     <S.AccountTask>
-      <Section title="Mis tareas" backgroundSection="transparent">
+      <Section title="My Metrics" backgroundSection="transparent">
         <Row>
-          {tasks.map(({ title, numberTasks }: ITask, index: number) => (
+          {metrics.map(({ title, numberTasks }: ITask, index: number) => (
             <S.TaskItem key={index}>
               <FeaturedCard
                 text={

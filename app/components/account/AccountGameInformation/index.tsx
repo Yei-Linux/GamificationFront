@@ -1,7 +1,7 @@
 import { Card, Row } from "gamification-library";
 import React from "react";
 import Section from "../../layouts/Section";
-import AccountAchieves, { IBadge } from "./AccountAchieves";
+import AccountBadges, { IBadge } from "./AccountBadges";
 import AccountSkills, { ISkill } from "./AccountSkills";
 
 import * as S from "./styles";
@@ -20,7 +20,7 @@ const AccountGameInformation = ({
       <Row>
         <S.GameItem>
           <Card width="full" heigth="full">
-            <AccountAchieves badges={badges} />
+            <AccountBadges badges={badges} />
           </Card>
         </S.GameItem>
 

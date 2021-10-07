@@ -21,12 +21,17 @@ const AchievesContainer = styled.div`
 const Account = () => {
   const [
     {
-      srcProfile,
-      lvl,
-      userName,
-      email,
-      experiencePercent,
-      tasks,
+      account: {
+        photo,
+        userName,
+        role,
+        lvl,
+        scorePercentBar,
+        score,
+        scoreToNextLvl,
+        socialNetworks,
+      },
+      metrics,
       skills,
       badges,
       userPositions,
@@ -38,18 +43,21 @@ const Account = () => {
       <Row>
         <Col spacing="none" xs={12} sm={12} md={12} lg={12}>
           <AccountInformation
-            srcProfile={srcProfile}
+            photo={photo}
             lvl={lvl}
             userName={userName}
-            email={email}
-            experiencePercent={experiencePercent}
+            role={role}
+            scorePercentBar={scorePercentBar}
+            score={score}
+            scoreToNextLvl={scoreToNextLvl}
+            socialNetworks={socialNetworks}
           />
         </Col>
 
         <Col spacing="none" xs={12} sm={12} md={12} lg={12}>
           <Row>
             <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>
-              <AccountTaskInformation tasks={tasks} />
+              <AccountTaskInformation metrics={metrics} />
             </Col>
 
             <Col spacing="sm" xs={12} sm={12} md={12} lg={12}>

@@ -7,19 +7,27 @@ import MainAccountInformation, {
 import * as S from "./styles";
 
 const AccountInformation = ({
-  srcProfile,
-  lvl,
+  photo,
   userName,
-  experiencePercent,
+  role,
+  lvl,
+  scorePercentBar,
+  score,
+  scoreToNextLvl,
+  socialNetworks,
 }: IAccountInformation) => {
   return (
     <S.AccountInformation>
       <Wave direction="bottom">
         <MainAccountInformation
-          srcProfile={srcProfile}
+          photo={photo}
           lvl={lvl}
           userName={userName}
-          experiencePercent={experiencePercent}
+          role={role}
+          scorePercentBar={scorePercentBar}
+          score={score}
+          scoreToNextLvl={scoreToNextLvl}
+          socialNetworks={socialNetworks}
         />
       </Wave>
     </S.AccountInformation>

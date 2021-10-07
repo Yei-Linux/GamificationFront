@@ -10,9 +10,10 @@ const PlayerInfo = () => {
       <MainAccountInformation
         background={themeCustom.light.neutral[800]}
         color={themeCustom.light.neutral[0]}
-        lvl="Level 10"
+        lvl={10}
         userName="YeiLinux"
-        experiencePercent={70}
+        role="Frontend Developer"
+        scorePercentBar={70}
         isShowOnlyImportantContent
       />
     </S.PlayerInfo>

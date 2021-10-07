@@ -11,7 +11,7 @@ export const ACCOUNT__TABLE = [
     render: (user: string) => (
       <RichText
         fontWeight="bold"
-        text={`[${user}](https://google.com?target=_blank)`}
+        text={`[${user}](/account/${user}?target=_blank)`}
       />
     ),
   },
