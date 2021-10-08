@@ -55,18 +55,18 @@ export const DUMMY__SKILLS = [
     title: "Javascript",
     description: "Basic Lvl",
     percent: 90,
-    name: "books_folder",
+    name: "javascript" as const,
   },
   {
     title: "Javascript",
     description: "Middle Lvl",
-    name: "books_folder",
+    name: "javascript" as const,
     percent: 75,
   },
   {
     title: "Python",
     description: "Basic Lvl",
-    name: "books_folder",
+    name: "python" as const,
     percent: 15,
   },
 ];

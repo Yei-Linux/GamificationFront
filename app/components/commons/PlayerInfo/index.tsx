@@ -14,6 +14,8 @@ const PlayerInfo = () => {
         userName="YeiLinux"
         role="Frontend Developer"
         scorePercentBar={70}
+        score={1500}
+        scoreToNextLvl={50}
         isShowOnlyImportantContent
       />
     </S.PlayerInfo>

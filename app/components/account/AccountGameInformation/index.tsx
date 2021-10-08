@@ -16,7 +16,7 @@ const AccountGameInformation = ({
   skills,
 }: AccountGameInformationProps) => {
   return (
-    <Section title="Mis Logros" backgroundSection="transparent">
+    <Section title="My Achieves" backgroundSection="transparent">
       <Row>
         <S.GameItem>
           <Card width="full" heigth="full">

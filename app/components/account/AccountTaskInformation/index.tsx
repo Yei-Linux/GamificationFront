@@ -21,6 +21,7 @@ const AccountTaskInformation = ({ metrics }: AccountTaskInformationProps) => {
           {metrics.map(({ title, numberTasks }: ITask, index: number) => (
             <S.TaskItem key={index}>
               <FeaturedCard
+                width="full"
                 text={
                   <div>
                     <Title level="h3">{numberTasks}</Title>

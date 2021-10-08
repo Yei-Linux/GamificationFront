@@ -11,6 +11,7 @@ export const GameItem = styled.div`
 
 export const AccountSkills = styled.div`
   padding: 1rem;
+  overflow: auto;
 `;
 
 export const Section = styled.div``;
@@ -21,13 +22,16 @@ export const Title = styled.div`
 
 export const AccountBadges = styled.div`
   padding: 1rem;
+  overflow: auto;
 `;
 
-export const BadgeList = styled.ul``
+export const BadgeList = styled.ul``;
 
 export const BadgeSection = styled.li`
   width: 100%;
   margin: 1rem;
+
+  color: ${themeCustom.light.primary.jordyBlue};
 `;
 
 export const Badge = styled.div`

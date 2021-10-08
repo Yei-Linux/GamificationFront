@@ -21,7 +21,7 @@ export interface IAccountScorePosition {
 const AccountScorePosition = ({ userPositions }: IAccountScorePosition) => {
   return (
     <S.AccountScorePosition>
-      <Section title="Mi puntuacion global">
+      <Section title="My global Score">
         <Row>
           <Table
             columns={ACCOUNT__TABLE}
@@ -41,7 +41,7 @@ const AccountScorePosition = ({ userPositions }: IAccountScorePosition) => {
                 level: (
                   <Tag
                     shadow="md"
-                    background={themeCustom.light.secondary.linkWater}
+                    background={themeCustom.light.extended.code}
                     color={componentsThemeCustom("light").card.earth.color}
                     text={`Lvl ${lvl}`}
                     textAlign="center"

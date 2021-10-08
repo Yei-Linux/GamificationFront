@@ -24,7 +24,7 @@ const AccountBadges = ({ badges }: IAccountBadges) => {
     <S.AccountBadges>
       <S.Title>
         <Title textAlign="center" fontWeight="light" level="h3">
-          My badges
+          My Badges
         </Title>
       </S.Title>
 
@@ -34,7 +34,7 @@ const AccountBadges = ({ badges }: IAccountBadges) => {
             <Title level="h4">{title}</Title>
             <S.Badge>
               {!icons.length ? (
-                <Empty size="50px"/>
+                <Empty size="50px" type="sad" />
               ) : (
                 <Row justifyContent="flex-start">
                   {icons.map(({ name, lvl }: IIcon, index: number) => (

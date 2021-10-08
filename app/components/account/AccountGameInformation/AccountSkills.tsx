@@ -1,11 +1,13 @@
-import { Icon, List, Title } from "gamification-library";
+import { Avatar, List, ProgressBar, Title } from "gamification-library";
 import React from "react";
+import { DUMMY__LANGUAGES } from "../../../dummy/languages";
 import * as S from "./styles";
 
 export interface ISkill {
   title: string;
   description: string;
-  name: string;
+  percent: number;
+  name: "javascript" | "python" | "java" | "c++";
 }
 
 export interface IAccountSkills {
@@ -21,16 +23,28 @@ const AccountSkills = ({ skills }: IAccountSkills) => {
         </Title>
       </S.Title>
 
-      {skills.map(({ title, name, description }: ISkill, index: number) => (
-        <S.Section key={index}>
-          <List.Item
-            noBorder
-            avatar={<Icon size="25px" name={name} />}
-            title={title}
-            description={description}
-          />
-        </S.Section>
-      ))}
+      {skills.map(
+        ({ title, name, description, percent }: ISkill, index: number) => (
+          <S.Section key={index}>
+            <List.Item
+              noBorder
+              avatar={
+                <Avatar background="white" src={DUMMY__LANGUAGES[name].src} />
+              }
+              title={title}
+              description={description}
+            >
+              <ProgressBar
+                maxWidth="40px"
+                maxHeight="40px"
+                percent={percent}
+                type="circle"
+                backgroundProgressBar="transparent"
+              />
+            </List.Item>
+          </S.Section>
+        )
+      )}
     </S.AccountSkills>
   );
 };

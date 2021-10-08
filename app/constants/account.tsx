@@ -3,10 +3,10 @@ import { RichText } from "gamification-library";
 import React from "react";
 
 export const ACCOUNT__TABLE = [
-  { title: "Posicion", dataIndex: "position" },
+  { title: "Position", dataIndex: "position" },
   { title: "Avatar", dataIndex: "avatar" },
   {
-    title: "Usuario",
+    title: "User",
     dataIndex: "user",
     render: (user: string) => (
       <RichText
@@ -17,7 +17,7 @@ export const ACCOUNT__TABLE = [
   },
   { title: "Level", dataIndex: "level" },
   {
-    title: "Puntos",
+    title: "Score",
     dataIndex: "points",
     render: (points: string) => <RichText fontWeight="bold" text={points} />,
   },
