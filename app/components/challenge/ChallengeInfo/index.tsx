@@ -1,25 +1,12 @@
 import classNames from "classnames";
 import { Link, RichText } from "gamification-library";
 import React from "react";
-import { themeCustom } from "../../../../styles/theme";
-import TitleSection from "../../layouts/TitleSection";
+import HighLightTitle from "../../layouts/HighLightTitle";
 import * as S from "./styles";
 
 const ChallengeInfo = () => {
   return (
-    <S.ChallengeInfo>
-      <S.Header
-        className={classNames("flex", "justify-between", "items-center")}
-      >
-        <TitleSection
-          padding="0px"
-          align="left"
-          color={themeCustom.light.primary.jordyBlue}
-          level="h2"
-          text="Whats your name?"
-        />
-      </S.Header>
-
+    <HighLightTitle title="Whats your name?" level="h2">
       <S.Info className={classNames("flex", "wrap", "justify-around ")}>
         <S.InfoItem className={classNames("flex", "justify-between")}>
           <RichText fontWeight="medium" text="Author:" textAlign="left" />
@@ -40,7 +27,7 @@ const ChallengeInfo = () => {
           <RichText text="10" textAlign="right" />
         </S.InfoItem>
       </S.Info>
-    </S.ChallengeInfo>
+    </HighLightTitle>
   );
 };
 

@@ -7,7 +7,7 @@ import * as S from "./styles";
 const ChallengeDetail = () => {
   return (
     <S.ChallengeDetail>
-      <Tab defaultActiveTab="problem">
+      <Tab defaultActiveTab="problem" width="100%">
         <Tab.List>
           <Tab.ListItem label="Problem" tabId="problem" />
           <Tab.ListItem label="Solution" tabId="solution" />

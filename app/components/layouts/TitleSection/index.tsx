@@ -6,8 +6,10 @@ import { themeCustom } from "../../../../styles/theme";
 import classNames from "classnames";
 import { TEXT__ALIGN__TO__FLEX } from "../../../constants/layouts";
 
+export type TLevels = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
 export interface TitleSectionProps {
-  level: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  level: TLevels;
   text: string;
   iconId?: string;
   align?: "center" | "justify" | "left" | "right";

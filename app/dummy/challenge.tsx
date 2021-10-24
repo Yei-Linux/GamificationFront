@@ -87,6 +87,32 @@ export const DUMMY__QUESTION__CODE = {
       var result = simpleArraySum(n, ar);
       process.stdout.write(result);
     }`,
-    answer: "",
+  answer: "",
   question: DUMMY__SAMPLE__CODE,
 };
+
+export const DUMMY_SAMPLE_EXAMPLE =
+  '<p><strong>This problem is solved with mutable functions:</strong></p><pre>import React from "react";<br><br>const Component = () =&gt; {<br>&nbsp;&nbsp;&nbsp;&nbsp;return (Hello World)<br>}\n\nexport default Component<br></pre><p>Thanks</p>';
+
+export const DUMMY__SAMPLE_ITEMS = [
+  {
+    title: "What's Your Name?",
+    description: "String practice: Print your name in the console.",
+    id: "a627b738-07bd-4bff-a553-6c9fe62d162c",
+  },
+  {
+    title: "What's Your Name?",
+    description: "String practice: Print your name in the console.",
+    id: "c7a469be-d3b8-42f1-aaf1-ac5253c7b821",
+  },
+  {
+    title: "What's Your Name?",
+    description: "String practice: Print your name in the console.",
+    id: "5628e497-020f-47e3-b411-3f009beadfb5",
+  },
+  {
+    title: "What's Your Name?",
+    description: "String practice: Print your name in the console.",
+    id: "871a3eb1-7979-4f0e-99fb-3fb6d7a8e106",
+  },
+];

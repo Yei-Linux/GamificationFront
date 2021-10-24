@@ -8,6 +8,11 @@ export const ChallengeDetail = styled.div`
   margin-top: 1.5rem;
 `;
 
-export const ChallengeSolution = styled.div``;
+export const ChallengeSolution = styled.div`
+  width: fit-content;
+  margin: auto;
+`;
 
-export const ChallengeProblem = styled.div``;
+export const ChallengeProblem = styled.div`
+  margin: auto;
+`;
