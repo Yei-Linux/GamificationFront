@@ -6,8 +6,9 @@ import Detail from "./Detail";
 import * as S from "./styles";
 
 export interface PageDetailProps {
-  title: string;
+  title?: string;
   detailButtonText?: string;
+  prefixUrl: string;
   items: IPageListItem[];
   listTitle: string;
   listButtonText: string;
@@ -24,6 +25,7 @@ const PageDetail = ({
   spacerSize = 5,
   listTitle,
   listButtonText,
+  prefixUrl,
 }: PageDetailProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,6 +36,7 @@ const PageDetail = ({
       <Drawer onClose={toggle} open={isOpen} height="100%" width="400px">
         <S.DetailList>
           <PageList
+            prefixUrl={prefixUrl}
             title={listTitle}
             items={items}
             buttonText={listButtonText}
@@ -57,6 +60,7 @@ const PageDetail = ({
           <Col spacing="md" xs={12} sm={12} md={4} lg={4}>
             <S.ListDesktop>
               <PageList
+                prefixUrl={prefixUrl}
                 title={listTitle}
                 items={items}
                 buttonText={listButtonText}

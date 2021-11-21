@@ -1,4 +1,4 @@
-import { ISectionItem } from "../components/home/MyActivities/SectionItem";
+import { ISectionItem } from "../components/commons/SectionList/SectionItem";
 
 export interface IViewAllButton {
   hasViewAllButton: boolean;

@@ -10,8 +10,8 @@ export interface ISectionItem {
   id?: string;
 }
 
-interface ISectionItemComponent extends ISectionItem{
-  url: string
+interface ISectionItemComponent extends ISectionItem {
+  url: string;
 }
 
 const SectionItem = ({ title, description, url }: ISectionItemComponent) => {

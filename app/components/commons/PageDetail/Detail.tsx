@@ -9,7 +9,7 @@ type IToggle = () => void;
 
 export interface DetailProps {
   children: React.ReactNode;
-  title: string;
+  title?: string;
   buttonText?: string;
   spacerSize?: 1 | 2 | 3 | 4 | 5;
   toggle: IToggle;
@@ -26,13 +26,15 @@ const Detail = ({
     <S.Detail>
       <S.DetailTitle>
         <Row justifyContent="space-between">
-          <TitleSection
-            padding="0px"
-            align="left"
-            color={themeCustom.light.primary.jordyBlue}
-            level="h2"
-            text={title}
-          />
+          {title && (
+            <TitleSection
+              padding="0px"
+              align="left"
+              color={themeCustom.light.primary.jordyBlue}
+              level="h2"
+              text={title}
+            />
+          )}
 
           <S.DetailViewAllButton>
             <Button onClick={toggle} width="auto" border="md">

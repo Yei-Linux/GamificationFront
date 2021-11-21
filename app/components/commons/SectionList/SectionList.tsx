@@ -1,21 +1,19 @@
+import classNames from "classnames";
 import React from "react";
 import { useArray } from "../../../hooks/useArray";
 import SectionItem, { ISectionItem } from "./SectionItem";
 import * as S from "./styles";
 
-export interface SectionMyActivityListProps {
+export interface ISectionList {
   sections: ISectionItem[];
   prefixUrl: string;
 }
 
-const SectionMyActivityList = ({
-  sections,
-  prefixUrl,
-}: SectionMyActivityListProps) => {
+const SectionList = ({ sections, prefixUrl }: ISectionList) => {
   const { value: sectionList } = useArray(sections);
 
   return (
-    <S.SectionList>
+    <S.SectionList className={classNames("flex", "justify-center")}>
       {sectionList.map(
         ({ title, description, id }: ISectionItem, index: number) => (
           <SectionItem
@@ -30,4 +28,4 @@ const SectionMyActivityList = ({
   );
 };
 
-export default SectionMyActivityList;
+export default SectionList;

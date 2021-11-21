@@ -33,3 +33,9 @@ export const DUMMY_CLASS_NOTES = [
     description: "Polimorphism",
   },
 ];
+
+export const DUMMY_NOTES_BY_TOPIC = {
+  id: "1",
+  title: "IA",
+  notes: DUMMY_CLASS_NOTES,
+};

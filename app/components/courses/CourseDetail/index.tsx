@@ -1,31 +1,29 @@
-import {
-  FeaturedCard,
-  Spacer,
-  Title,
-} from "gamification-library";
-import React, { Fragment, useState } from "react";
-import { themeCustom } from "../../../../styles/theme";
-import { DUMMY_COURSE_DETAIL } from "../../../dummy/courses";
-import { ICourseDetail, ISummary } from "../../../types/course";
+import { Spacer } from "gamification-library";
+import React from "react";
 import Achievements from "../../commons/Achievements";
 import { IAchievementsItem } from "../../commons/Achievements/AchievementsItem";
-import TutorInfo from "../../commons/TutorInfo";
-import TitleSection from "../../layouts/TitleSection";
+import { ISectionItem } from "../../commons/SectionList/SectionItem";
+import TutorInfo, { ITutor } from "../../commons/TutorInfo";
+import Summaries from "../Summaries";
 
 import * as S from "./styles";
 
-export interface CourseDetailProps {}
+export interface ICourseDetail {
+  id?: string;
+  title?: string;
+  description: string;
 
-const CourseDetail = () => {
-  const [
-    {
-      description,
-      tutor: { id: tutorId, name: tutorName, description: tutorDescription },
-      achievements,
-      summary,
-    },
-  ] = useState<ICourseDetail>(DUMMY_COURSE_DETAIL);
+  tutor: ITutor;
+  achievements: IAchievementsItem[];
+  summaries: ISectionItem[];
+}
 
+const CourseDetail = ({
+  description,
+  tutor: { id: tutorId, name: tutorName, description: tutorDescription },
+  achievements,
+  summaries,
+}: ICourseDetail) => {
   return (
     <S.CourseDetail>
       <S.Description>{description}</S.Description>
@@ -51,33 +49,7 @@ const CourseDetail = () => {
         )}
       </Achievements>
 
-      <S.Summary>
-        <TitleSection
-          padding="0px"
-          align="left"
-          color={themeCustom.light.secondary.prim}
-          level="h4"
-          text="Classes of this course"
-        />
-
-        <Spacer direction="bottom" />
-
-        <S.Classes>
-          {summary.map(({ name }: ISummary, index: number) => (
-            <Fragment key={index}>
-              <FeaturedCard
-                text={
-                  <div>
-                    <Title level="h3">{name}</Title>
-                  </div>
-                }
-              />
-
-              <Spacer direction="bottom" />
-            </Fragment>
-          ))}
-        </S.Classes>
-      </S.Summary>
+      <Summaries summaries={summaries} />
     </S.CourseDetail>
   );
 };

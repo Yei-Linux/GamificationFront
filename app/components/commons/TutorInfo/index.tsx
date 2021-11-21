@@ -17,7 +17,7 @@ const TutorInfo = ({ name, description }: ITutor) => {
       <TitleSection
         padding="0px"
         align="left"
-        color={themeCustom.light.secondary.prim}
+        color={themeCustom.light.neutral[300]}
         level="h4"
         text="Know more about your teacher"
       />

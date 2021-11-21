@@ -4,14 +4,17 @@ export const DUMMY_THEME_COURSES = [
   {
     title: "IA",
     description: "Basic models",
+    id: "2",
   },
   {
     title: "Structure Programmimng",
     description: "Loops and conditionals",
+    id: "3",
   },
   {
     title: "OOP Programming",
     description: "Polimorphism",
+    id: "4",
   },
 ];
 
@@ -26,7 +29,7 @@ export const DUMMY_COURSE_DETAIL = {
       title: "Scrapping",
       description: "Get web content",
       icondId: "preview",
-      themeType: "sky" as const,
+      themeType: "warm" as const,
     },
     {
       title: "Scrapping",
@@ -38,21 +41,24 @@ export const DUMMY_COURSE_DETAIL = {
       title: "Scrapping",
       description: "Get web content",
       icondId: "preview",
-      themeType: "skin" as const,
+      themeType: "warm" as const,
     },
   ],
-  summary: [
+  summaries: [
     {
       id: "1",
-      name: "Testing Beautiful Soup lib",
+      title: "Testing Beautiful Soup lib",
+      description: "Learning some main topics",
     },
     {
       id: "2",
-      name: "Developing daily task",
+      title: "Testing Beautiful Soup lib",
+      description: "Learning some main topics",
     },
     {
       id: "3",
-      name: "Show important data",
+      title: "Testing Beautiful Soup lib",
+      description: "Learning some main topics",
     },
   ],
 };

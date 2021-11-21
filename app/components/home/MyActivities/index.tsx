@@ -5,7 +5,7 @@ import { useArray } from "../../../hooks/useArray";
 import { IMyActivity } from "../../../types/home";
 import Section from "../../layouts/Section";
 import TitleSection from "../../layouts/TitleSection";
-import SectionList from "./SectionList";
+import SectionList from "../../commons/SectionList/SectionList";
 
 import * as S from "./styles";
 
