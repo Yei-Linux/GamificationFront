@@ -33,7 +33,7 @@ const NotesGroup = ({ notes }: INotesGroup) => {
       ) : (
         <Note.NotesLayout>
           {notesItems?.map(
-            ({ id, title, text }: INoteItemGeneralProps, index: number) => (
+            ({ id, title, description }: INoteItemGeneralProps, index: number) => (
               <NotesItem
                 onSave={toggleFinishOnCreatedOrEditNote}
                 onEdit={() => toggleUpAndSetNoteId(id)}
@@ -46,7 +46,7 @@ const NotesGroup = ({ notes }: INotesGroup) => {
                 key={index}
                 id={id}
                 title={title}
-                text={text}
+                description={description}
                 onDelete={handleDeleteNote}
               />
             )

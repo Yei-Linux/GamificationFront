@@ -7,13 +7,16 @@ import * as S from "./styles";
 export interface ISectionList {
   sections: ISectionItem[];
   prefixUrl: string;
+  alignItems: "center" | "start";
 }
 
-const SectionList = ({ sections, prefixUrl }: ISectionList) => {
+const SectionList = ({ sections, prefixUrl, alignItems }: ISectionList) => {
   const { value: sectionList } = useArray(sections);
 
   return (
-    <S.SectionList className={classNames("flex", "justify-center")}>
+    <S.SectionList
+      className={classNames("flex", "justify-center", `items-${alignItems}`)}
+    >
       {sectionList.map(
         ({ title, description, id }: ISectionItem, index: number) => (
           <SectionItem

@@ -33,7 +33,11 @@ const MyActivities = () => {
                 text={title}
                 iconId={iconId}
               />
-              <SectionList prefixUrl={prefixUrl} sections={sections} />
+              <SectionList
+                alignItems="center"
+                prefixUrl={prefixUrl}
+                sections={sections}
+              />
               {hasViewAllButton && url && (
                 <Row height="auto" justifyContent="center">
                   <S.ViewAllLink isExternal text="View all" href={url} />

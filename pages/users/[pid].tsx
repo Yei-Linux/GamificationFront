@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
 import { Col, mediaQuery, Row } from "gamification-library";
 import React, { useState } from "react";
-import AccountGameInformation from "../app/components/account/AccountGameInformation";
-import AccountInformation from "../app/components/account/AccountInformation";
-import AccountScorePosition from "../app/components/account/AccountScorePosition";
-import AccountTaskInformation from "../app/components/account/AccountTaskInformation";
-import { DUMMY__ACCOUNT__INFORMATION } from "../app/dummy/account";
-import WithLayout from "../hoc/WithLayout";
-import { GridSection } from "../styles/utilities/display";
+import AccountGameInformation from "../../app/components/account/AccountGameInformation";
+import AccountInformation from "../../app/components/account/AccountInformation";
+import AccountScorePosition from "../../app/components/account/AccountScorePosition";
+import AccountTaskInformation from "../../app/components/account/AccountTaskInformation";
+import { DUMMY__ACCOUNT__INFORMATION } from "../../app/dummy/account";
+import WithLayout from "../../hoc/WithLayout";
+import { GridSection } from "../../styles/utilities/display";
 
 const AchievesContainer = styled.div`
   margin: auto;

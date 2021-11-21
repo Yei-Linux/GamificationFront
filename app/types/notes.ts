@@ -1,7 +1,7 @@
 export interface INoteItemGeneralProps {
   id: string | number;
   title?: string;
-  text?: string;
+  description?: string;
 }
 
 export type IEventNote = (value: string) => void;

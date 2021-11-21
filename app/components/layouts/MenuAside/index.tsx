@@ -42,7 +42,7 @@ const MenuAside = ({ onClose, open }: MenuAsideProps) => {
         ></Menu.SubMenu>
         <Menu.SubMenu
           title="My account"
-          href="/account"
+          href="/users/yeilinux"
           icon={<Icon name="bullet__item" />}
         ></Menu.SubMenu>
         <Menu.SubMenu

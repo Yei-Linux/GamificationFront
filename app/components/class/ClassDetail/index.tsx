@@ -15,7 +15,6 @@ export interface IClassDetail {
 }
 
 const ClassDetails = ({
-  title,
   tutor: { id: tutorId, name: tutorName, description: tutorDescription },
   achievements,
 }: IClassDetail) => {
@@ -33,13 +32,6 @@ const ClassDetails = ({
 
       <S.Content>
         <S.Header>
-          <TitleSection
-            padding="0px"
-            align="left"
-            color={themeCustom.light.primary.jordyBlue}
-            level="h3"
-            text={title}
-          />
           <TutorInfo
             id={tutorId}
             name={tutorName}

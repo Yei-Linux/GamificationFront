@@ -5,12 +5,13 @@ export const DUMMY_CLASS = {
   id: "1",
   title: "Scraping with Scrapy",
   tutor: DUMMY_TUTOR,
+  examId: "1",
   achievements: [
     {
       title: "Scrapping",
       description: "Get web content",
       icondId: "preview",
-      themeType: "sky" as const,
+      themeType: "warm" as const,
     },
     {
       title: "Scrapping",
@@ -22,7 +23,7 @@ export const DUMMY_CLASS = {
       title: "Scrapping",
       description: "Get web content",
       icondId: "preview",
-      themeType: "skin" as const,
+      themeType: "warm" as const,
     },
   ],
   notes: DUMMY_CLASS_NOTES,

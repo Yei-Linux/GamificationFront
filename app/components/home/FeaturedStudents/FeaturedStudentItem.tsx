@@ -55,7 +55,7 @@ const FeaturedStudentItem = ({
           />
 
           <Row>
-            <CustomLink isExternal href={`/account/${userName}`}>
+            <CustomLink isExternal href={`/users/${userName}`}>
               <Button width="auto" heigth="auto">
                 View Profile
               </Button>

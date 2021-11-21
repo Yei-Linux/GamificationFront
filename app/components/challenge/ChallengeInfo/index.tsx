@@ -10,7 +10,7 @@ const ChallengeInfo = () => {
       <S.Info className={classNames("flex", "wrap", "justify-around ")}>
         <S.InfoItem className={classNames("flex", "justify-between")}>
           <RichText fontWeight="medium" text="Author:" textAlign="left" />
-          <Link href="/account" isExternal>
+          <Link href="/users/yei-linux" isExternal>
             <RichText text="YeiLinux" textAlign="right" />
           </Link>
         </S.InfoItem>

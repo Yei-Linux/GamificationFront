@@ -78,7 +78,7 @@ export const DUMMY__MY__ACTIVITIES = [
       hasViewAllButton: true,
       url: "/courses",
     },
-    prefixUrl: "class",
+    prefixUrl: "classes",
     sections: [
       {
         title: "Variables in JS",
@@ -121,7 +121,7 @@ export const DUMMY__MY__ACTIVITIES = [
       hasViewAllButton: false,
       url: null,
     },
-    prefixUrl: "exam",
+    prefixUrl: "exams",
     sections: [
       {
         title: "Entrance Exam",

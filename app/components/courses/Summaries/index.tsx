@@ -24,7 +24,11 @@ const Summaries = ({ summaries }: ISummaries) => {
       <Spacer direction="bottom" />
 
       <S.Classes>
-        <SectionList sections={summaries} prefixUrl="/class" />
+        <SectionList
+          alignItems="start"
+          sections={summaries}
+          prefixUrl="/classes"
+        />
       </S.Classes>
     </S.Summary>
   );

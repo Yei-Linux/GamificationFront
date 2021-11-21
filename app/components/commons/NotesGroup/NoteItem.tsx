@@ -20,7 +20,7 @@ export interface INotesItemProps extends INoteItemGeneralProps {
 const NotesItem = ({
   id,
   title,
-  text,
+  description,
   onChangeTitle,
   onSave,
   onEdit,
@@ -32,7 +32,7 @@ const NotesItem = ({
       <Note
         titleDefaultValue={title || ""}
         onChangeTitle={onChangeTitle}
-        defaultValue={text}
+        defaultValue={description}
         onChange={onChange}
         onDelete={() => onDelete(id)}
         onSave={onSave}

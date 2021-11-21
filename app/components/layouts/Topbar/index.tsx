@@ -45,14 +45,19 @@ const Topbar = ({ handleOpenMenu }: TopbarProps) => {
               <Spacer direction="left" />
               <Icon name="remind" size="20px" />
               <Spacer direction="left" />
-              <Icon name="setting" size="20px" />
+
+              <Link href="/settings" passHref>
+                <CustomLink href="/settings">
+                  <Icon name="setting" size="20px" />
+                </CustomLink>
+              </Link>
               <Spacer direction="left" />
               <Spacer direction="left" />
               <Avatar src="https://iconape.com/wp-content/png_logo_vector/avatar-6.png" />
               <Spacer direction="left" />
 
-              <Link href="/account" passHref>
-                <CustomLink href="/account">
+              <Link href="/users/yeilinux" passHref>
+                <CustomLink href="/users/yeilinux">
                   <RichText text="Yei Linux" />
                 </CustomLink>
               </Link>
