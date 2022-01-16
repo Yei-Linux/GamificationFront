@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Link, RichText } from "gamification-library";
+import { Link, RichText } from "@gamiui/standard";
 import React from "react";
 import HighLightTitle from "../../layouts/HighLightTitle";
 import * as S from "./styles";

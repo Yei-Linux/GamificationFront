@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/display-name */
-import { Icon, Layout, Sticky } from "gamification-library";
+import { Icon, Layout, Sticky } from "@gamiui/standard";
 
 import React, { Fragment, useState } from "react";
 import PlayerInfo from "../app/components/commons/PlayerInfo";

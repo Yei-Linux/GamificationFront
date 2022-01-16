@@ -1,4 +1,4 @@
-import { Empty, Floating, GuideMessage, Note } from "gamification-library";
+import { Empty, Floating, GuideMessage, Note } from "@gamiui/standard";
 import React from "react";
 import * as S from "./styles";
 

@@ -1,4 +1,4 @@
-import { Chat } from "gamification-library";
+import { Chat } from "@gamiui/standard";
 import React from "react";
 import { themeCustom } from "../../../../styles/theme";
 import { DUMMY_CLASS_CHAT } from "../../../dummy/class";

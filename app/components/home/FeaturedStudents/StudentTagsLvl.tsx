@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Spacer, Tag } from "gamification-library";
+import { Spacer, Tag } from "@gamiui/standard";
 import React, { Fragment } from "react";
 import * as S from "./styles";
 

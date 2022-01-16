@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Empty, Image, RichText, Row, Title } from "gamification-library";
+import { Empty, Image, RichText, Row, Title } from "@gamiui/standard";
 import React from "react";
 import { DUMMY__BADGES } from "../../../dummy/badges";
 

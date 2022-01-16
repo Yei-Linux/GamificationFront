@@ -1,4 +1,4 @@
-import { Button, Icon, List, Link as CustomLink } from "gamification-library";
+import { Button, Icon, List, Link as CustomLink } from "@gamiui/standard";
 import React from "react";
 
 import Link from "next/link";

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import classNames from "classnames";
-import { Icon, Link as CustomLink } from "gamification-library";
+import { Icon, Link as CustomLink } from "@gamiui/standard";
 import Link from "next/link";
 import React from "react";
 import ChallengesProblems from "../../app/components/challenge/ChallengesProblems";

@@ -1,4 +1,4 @@
-import { Slider, Sliding } from "gamification-library";
+import { Slider, Sliding } from "@gamiui/standard";
 import React from "react";
 import InstructionItem from "./InstructionItem";
 

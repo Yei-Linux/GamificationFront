@@ -1,4 +1,4 @@
-import { Row } from "gamification-library";
+import { Row } from "@gamiui/standard";
 import React from "react";
 import { DUMMY__MY__ACTIVITIES } from "../../../dummy/home";
 import { useArray } from "../../../hooks/useArray";

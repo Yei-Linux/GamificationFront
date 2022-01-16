@@ -8,7 +8,7 @@ import {
   Row,
   Spacer,
   Title,
-} from "gamification-library";
+} from "@gamiui/standard";
 import { SIGN__TEXT__VALUES } from "../../../constants/auth";
 import { TLoginType } from ".";
 

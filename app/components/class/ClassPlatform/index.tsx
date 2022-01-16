@@ -1,4 +1,4 @@
-import { Button, Row, Link as CustomLink } from "gamification-library";
+import { Button, Row, Link as CustomLink } from "@gamiui/standard";
 import React from "react";
 import { INoteItemGeneralProps } from "../../../types/notes";
 import { IAchievementsItem } from "../../commons/Achievements/AchievementsItem";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Image, RichText, Button } from "gamification-library";
+import { Row, Image, RichText, Button } from "@gamiui/standard";
 import TitleSection from "../../layouts/TitleSection";
 import { themeCustom } from "../../../../styles/theme";
 

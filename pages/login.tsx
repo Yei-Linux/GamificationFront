@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Row, Col, Image, mediaQuery } from "gamification-library";
+import { Row, Col, Image, mediaQuery } from "@gamiui/standard";
 import React from "react";
 import SignViews from "../app/components/auth/SignViews";
 

@@ -1,4 +1,4 @@
-import { Options } from "gamification-library";
+import { Options } from "@gamiui/standard";
 import React from "react";
 import {
   DUMMY__QUESTION__CODE,

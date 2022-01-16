@@ -1,4 +1,4 @@
-import { FeaturedCard, RichText, Title } from "gamification-library";
+import { FeaturedCard, RichText, Title } from "@gamiui/standard";
 import React from "react";
 
 import * as S from "./styles";

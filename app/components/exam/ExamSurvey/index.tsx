@@ -1,4 +1,4 @@
-import { Survey } from "gamification-library";
+import { Survey } from "@gamiui/standard";
 import React, { Fragment, useState } from "react";
 import { DUMMY_INSTRUCTIONS__EXAM } from "../../../dummy/instructions";
 import { useArray } from "../../../hooks/useArray";

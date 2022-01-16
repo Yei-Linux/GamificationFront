@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Wave, Slider } from "gamification-library";
+import { Wave, Slider } from "@gamiui/standard";
 import Section from "../../layouts/Section";
 import { themeCustom } from "../../../../styles/theme";
 import MySectionItem, { IMySectionItem } from "./MySectionItem";

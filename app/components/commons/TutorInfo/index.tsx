@@ -1,4 +1,4 @@
-import { Avatar, List, Spacer } from "gamification-library";
+import { Avatar, List, Spacer } from "@gamiui/standard";
 import * as React from "react";
 import { themeCustom } from "../../../../styles/theme";
 import TitleSection from "../../layouts/TitleSection";

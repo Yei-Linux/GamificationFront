@@ -1,4 +1,4 @@
-import { CodeView } from "gamification-library";
+import { CodeView } from "@gamiui/standard";
 import React, { useState } from "react";
 import { DUMMY_SAMPLE_EXAMPLE } from "../../../dummy/challenge";
 import * as S from "./styles";

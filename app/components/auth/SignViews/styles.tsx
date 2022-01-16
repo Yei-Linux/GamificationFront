@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Icon, Steps } from "gamification-library";
+import { Icon, Steps } from "@gamiui/standard";
 import { themeCustom } from "../../../../styles/theme";
 
 export const SignViews = styled.div``;

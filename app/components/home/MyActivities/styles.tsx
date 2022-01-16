@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Link } from "gamification-library";
+import { Link } from "@gamiui/standard";
 import { GridSection } from "../../../../styles/utilities/display";
 
 export const MyActivities = styled.div`

@@ -1,4 +1,4 @@
-import { Col, RichText, Row, Title, Wave, Image } from "gamification-library";
+import { Col, RichText, Row, Title, Wave, Image } from "@gamiui/standard";
 import React from "react";
 import { themeCustom } from "../../../../styles/theme";
 import * as S from "./styles";

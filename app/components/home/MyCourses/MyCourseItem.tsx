@@ -6,7 +6,7 @@ import {
   Link as CustomLink,
   Avatar,
   Spacer,
-} from "gamification-library";
+} from "@gamiui/standard";
 import React from "react";
 
 import * as S from "./styles";

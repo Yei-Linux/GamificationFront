@@ -5,7 +5,7 @@ import {
   Row,
   Link as CustomLink,
   RichText,
-} from "gamification-library";
+} from "@gamiui/standard";
 import React from "react";
 import * as S from "./styles";
 import StudentTagsLvl from "./StudentTagsLvl";

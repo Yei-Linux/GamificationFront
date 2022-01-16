@@ -1,4 +1,4 @@
-import { Row, Col, Drawer } from "gamification-library";
+import { Row, Col, Drawer } from "@gamiui/standard";
 import React, { Fragment, useState } from "react";
 import { IPageListItem } from "../../../types/listItem";
 import PageList from "../PageList";

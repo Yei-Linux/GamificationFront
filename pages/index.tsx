@@ -14,7 +14,7 @@ const Home = () => {
       <IdeasAndProjects />
       <FeaturedStudents />
       <MyActivities />
-      <MyCourses/>
+      <MyCourses />
     </div>
   );
 };

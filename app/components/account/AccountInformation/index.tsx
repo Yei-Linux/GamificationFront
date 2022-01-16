@@ -1,4 +1,4 @@
-import { Wave } from "gamification-library";
+import { Wave } from "@gamiui/standard";
 import React from "react";
 import MainAccountInformation, {
   IAccountInformation,

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Col, mediaQuery, Row } from "gamification-library";
+import { Col, mediaQuery, Row } from "@gamiui/standard";
 import React, { useState } from "react";
 import AccountGameInformation from "../../app/components/account/AccountGameInformation";
 import AccountInformation from "../../app/components/account/AccountInformation";

@@ -6,7 +6,7 @@ import {
   Menu,
   Icon,
   Link as CustomLink,
-} from "gamification-library";
+} from "@gamiui/standard";
 import React from "react";
 
 import Link from "next/link";

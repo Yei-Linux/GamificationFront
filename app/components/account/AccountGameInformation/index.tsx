@@ -1,4 +1,4 @@
-import { Card, Row } from "gamification-library";
+import { Card, Row } from "@gamiui/standard";
 import React from "react";
 import Section from "../../layouts/Section";
 import AccountBadges, { IBadge } from "./AccountBadges";

@@ -10,7 +10,7 @@ import {
   Spacer,
   Tag,
   Title,
-} from "gamification-library";
+} from "@gamiui/standard";
 import React from "react";
 import { componentsThemeCustom, themeCustom } from "../../../../styles/theme";
 

@@ -1,6 +1,6 @@
 import "../styles/global.css";
 import React from "react";
-import { ThemeGamification } from "gamification-library";
+import { ThemeGamification } from "@gamiui/standard";
 
 function MyApp({ Component, pageProps }: any) {
   return (

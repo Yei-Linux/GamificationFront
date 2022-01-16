@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Button, CodeView, TextEditor } from "gamification-library";
+import { Button, CodeView, TextEditor } from "@gamiui/standard";
 import React, { useState } from "react";
 import { DUMMY_SAMPLE_EXAMPLE } from "../../../dummy/challenge";
 import * as S from "./styles";

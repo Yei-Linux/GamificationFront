@@ -1,4 +1,4 @@
-import { Video } from "gamification-library";
+import { Video } from "@gamiui/standard";
 import React from "react";
 import { themeCustom } from "../../../../styles/theme";
 import TitleSection from "../../layouts/TitleSection";

@@ -1,4 +1,4 @@
-import { Spacer } from "gamification-library";
+import { Spacer } from "@gamiui/standard";
 import React from "react";
 import Achievements from "../../commons/Achievements";
 import { IAchievementsItem } from "../../commons/Achievements/AchievementsItem";

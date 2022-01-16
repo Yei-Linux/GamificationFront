@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mediaQuery } from "gamification-library";
+import { mediaQuery } from "@gamiui/standard";
 
 export const PageDetail = styled.div`
   padding: 2rem;

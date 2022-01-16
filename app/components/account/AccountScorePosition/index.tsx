@@ -1,4 +1,4 @@
-import { Avatar, Row, Table, Tag } from "gamification-library";
+import { Avatar, Row, Table, Tag } from "@gamiui/standard";
 import React from "react";
 import { componentsThemeCustom, themeCustom } from "../../../../styles/theme";
 import { ACCOUNT__TABLE } from "../../../constants/account";

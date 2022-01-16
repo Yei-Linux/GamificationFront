@@ -1,4 +1,4 @@
-import { Tab } from "gamification-library";
+import { Tab } from "@gamiui/standard";
 import React from "react";
 import ChallengeProblem from "./ChallengeProblem";
 import ChallengeSolution from "./ChallengeSolution";

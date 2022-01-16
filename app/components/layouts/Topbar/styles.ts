@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mediaQuery } from "gamification-library";
+import { mediaQuery } from "@gamiui/standard";
 import { themeCustom } from "../../../../styles/theme";
 
 export const TopbarLeft = styled.div``;

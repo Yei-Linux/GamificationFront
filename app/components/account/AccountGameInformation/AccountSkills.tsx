@@ -1,4 +1,4 @@
-import { Avatar, List, ProgressBar, Title } from "gamification-library";
+import { Avatar, List, ProgressBar, Title } from "@gamiui/standard";
 import React from "react";
 import { DUMMY__LANGUAGES } from "../../../dummy/languages";
 import * as S from "./styles";

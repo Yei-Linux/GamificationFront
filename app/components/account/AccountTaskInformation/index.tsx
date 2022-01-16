@@ -1,4 +1,4 @@
-import { FeaturedCard, RichText, Row, Title } from "gamification-library";
+import { FeaturedCard, RichText, Row, Title } from "@gamiui/standard";
 import React from "react";
 import Section from "../../layouts/Section";
 

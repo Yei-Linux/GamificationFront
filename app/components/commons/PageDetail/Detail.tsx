@@ -1,4 +1,4 @@
-import { Button, Row, Spacer } from "gamification-library";
+import { Button, Row, Spacer } from "@gamiui/standard";
 import React from "react";
 import { themeCustom } from "../../../../styles/theme";
 import TitleSection from "../../layouts/TitleSection";

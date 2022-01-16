@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { RichText } from "gamification-library";
+import { RichText } from "@gamiui/standard";
 import React from "react";
 
 export const ACCOUNT__TABLE = [

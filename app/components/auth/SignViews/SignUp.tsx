@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./styles";
-import { Card, Steps } from "gamification-library";
+import { Card, Steps } from "@gamiui/standard";
 import { TLoginType } from ".";
 import SignUpStepOne from "./SignUpStepOne";
 import SignUpStepTwo from "./SignUpStepTwo";

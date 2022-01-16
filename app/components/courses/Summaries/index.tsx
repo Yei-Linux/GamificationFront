@@ -1,4 +1,4 @@
-import { Spacer } from "gamification-library";
+import { Spacer } from "@gamiui/standard";
 import React from "react";
 import { themeCustom } from "../../../../styles/theme";
 import { ISectionItem } from "../../commons/SectionList/SectionItem";

@@ -1,4 +1,4 @@
-import { Card, Icon, Link as CustomLink } from "gamification-library";
+import { Card, Icon, Link as CustomLink } from "@gamiui/standard";
 import React from "react";
 import * as S from "./styles";
 import Link from "next/link";

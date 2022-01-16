@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as S from "./styles";
 
-import { Icon, Spacer, Title } from "gamification-library";
+import { Icon, Spacer, Title } from "@gamiui/standard";
 import { themeCustom } from "../../../../styles/theme";
 import classNames from "classnames";
 import { TEXT__ALIGN__TO__FLEX } from "../../../constants/layouts";

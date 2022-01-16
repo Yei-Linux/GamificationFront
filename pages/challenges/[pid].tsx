@@ -5,7 +5,7 @@ import ChallengeDetail from "../../app/components/challenge/ChallengeDetail";
 import ChallengeInfo from "../../app/components/challenge/ChallengeInfo";
 import WithLayout from "../../hoc/WithLayout";
 
-import { Icon, Link as CustomLink } from "gamification-library";
+import { Icon, Link as CustomLink } from "@gamiui/standard";
 import classNames from "classnames";
 
 const ChallengeWrapper = styled.div`

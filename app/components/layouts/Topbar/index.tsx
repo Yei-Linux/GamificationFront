@@ -9,7 +9,7 @@ import {
   Spacer,
   Title,
   Link as CustomLink,
-} from "gamification-library";
+} from "@gamiui/standard";
 
 import Link from "next/link";
 

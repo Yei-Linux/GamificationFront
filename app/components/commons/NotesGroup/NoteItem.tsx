@@ -1,4 +1,4 @@
-import { Note } from "gamification-library";
+import { Note } from "@gamiui/standard";
 import React from "react";
 import {
   IDeleteNote,

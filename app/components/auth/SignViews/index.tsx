@@ -1,4 +1,4 @@
-import { Tab } from "gamification-library";
+import { Tab } from "@gamiui/standard";
 import React, { useState } from "react";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
